@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.macamp.complaint.ui.fragments.login.LoginFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/login_fragment" />
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.macamp.complaint.ui.fragments.dashboard.DashboardFragment"
+        android:label="fragment_dashboard"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:popEnterAnim="@anim/fade_in"
+        app:popExitAnim="@anim/fade_out"
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_dashboardFragment_to_complaintsFragment"
+            app:destination="@id/complaintsFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+
+            android:id="@+id/action_dashboardFragment_to_pendingFragment"
+            app:destination="@id/pendingFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_completedFragment"
+            app:destination="@id/completedFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_submittedFragment"
+            app:destination="@id/submittedFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/complaintsFragment"
+        android:name="com.macamp.complaint.ui.fragments.allComplaints.AllComplaintsFragment"
+        android:label="fragment_complaints"
+        tools:layout="@layout/fragment_complaints" />
+    <action
+        android:id="@+id/action_dashboardFragment"
+        app:destination="@id/dashboardFragment"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:launchSingleTop="true"
+        app:popEnterAnim="@anim/fade_in"
+        app:popExitAnim="@anim/fade_out"
+        app:popUpTo="@id/nav_graph"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@+id/action_complaintsFragment"
+        app:destination="@id/complaintsFragment"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:launchSingleTop="true"
+        app:popEnterAnim="@anim/fade_in"
+        app:popExitAnim="@anim/fade_out"
+        app:popUpTo="@id/nav_graph"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@+id/action_returnFragment"
+        app:destination="@id/returnFragment"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:launchSingleTop="true"
+        app:popEnterAnim="@anim/fade_in"
+        app:popExitAnim="@anim/fade_out"
+        app:popUpTo="@id/nav_graph"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@+id/action_pendingFragment"
+        app:destination="@id/pendingFragment"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:launchSingleTop="true"
+        app:popEnterAnim="@anim/fade_in"
+        app:popExitAnim="@anim/fade_out"
+        app:popUpTo="@id/nav_graph"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@+id/action_submitFragment"
+        app:destination="@id/submittedFragment"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:launchSingleTop="true"
+        app:popEnterAnim="@anim/fade_in"
+        app:popExitAnim="@anim/fade_out"
+        app:popUpTo="@id/nav_graph"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@+id/action_resolvedFragment"
+        app:destination="@id/resolvedFragment"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:launchSingleTop="true"
+        app:popEnterAnim="@anim/fade_in"
+        app:popExitAnim="@anim/fade_out"
+        app:popUpTo="@id/nav_graph"
+        app:popUpToInclusive="true" />
+    <fragment
+        android:id="@+id/pendingFragment"
+        android:name="com.macamp.complaint.ui.fragments.pendingComplaints.PendingFragment"
+        android:label="fragment_pending"
+        tools:layout="@layout/fragment_pending" />
+    <fragment
+        android:id="@+id/completedFragment"
+        android:name="com.macamp.complaint.ui.fragments.completedComplaints.CompletedFragment"
+        android:label="CompletedFragment" />
+    <fragment
+        android:id="@+id/submittedFragment"
+        android:name="com.macamp.complaint.ui.fragments.submittedComplaints.SubmittedFragment"
+        android:label="fragment_submitted"
+        tools:layout="@layout/fragment_submitted" />
+    <fragment
+        android:id="@+id/returnFragment"
+        android:name="com.macamp.complaint.ui.fragments.returnComplaints.ReturnFragment"
+        android:label="fragment_return"
+        tools:layout="@layout/fragment_return" />
+    <fragment
+        android:id="@+id/resolvedFragment"
+        android:name="com.macamp.complaint.ui.fragments.resolvedComplaints.ResolvedFragment"
+        android:label="fragment_resolved"
+        tools:layout="@layout/fragment_resolved" />
+</navigation>

@@ -1,0 +1,282 @@
+[
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\drawable_btn_bg.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\drawable\\btn_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_compare_arrows.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\drawable\\ic_compare_arrows.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\anim_slide_out_down.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\anim\\slide_out_down.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\anim_slide_out_up.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\anim\\slide_out_up.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\font_poppins_thin.ttf.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\font\\poppins_thin.ttf"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_resolved.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\layout\\fragment_resolved.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\layout_show_return_dialog.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\layout\\show_return_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\layout_layout_item.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\layout\\layout_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\layout_item_layout.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\layout\\item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_assignment_returned.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\drawable\\ic_assignment_returned.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\drawable_orange_circle.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\drawable\\orange_circle.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\layout_loader_layout.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\layout\\loader_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_event_busy.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\drawable\\ic_event_busy.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_complaints.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\layout\\fragment_complaints.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\anim_fade_out.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\anim\\fade_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_submitted.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\layout\\fragment_submitted.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_exit_to_app.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\drawable\\ic_exit_to_app.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\drawable_gredient.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\drawable\\gredient.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\drawable_bottom_circle.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\drawable\\bottom_circle.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\drawable_blue_circle.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\drawable\\blue_circle.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\drawable_no_found.png.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\drawable\\no_found.png"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\anim_slide_out_up_down.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\anim\\slide_out_up_down.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\font_lucida_italic.ttf.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\font\\lucida_italic.ttf"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_pending.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\layout\\activity_pending.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\layout_nav_drawer.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\layout\\nav_drawer.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\anim_slide_from_bottom.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\anim\\slide_from_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_arrow_right_white.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\drawable\\ic_arrow_right_white.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_assignment_turned_in.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\drawable\\ic_assignment_turned_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\anim_fade_in.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\anim\\fade_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_menu.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\drawable\\ic_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_arrow_right_black.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\drawable\\ic_arrow_right_black.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\font_poppins_semi_bold.ttf.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\font\\poppins_semi_bold.ttf"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\anim_layout_animation_slide_from_bottom.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\anim\\layout_animation_slide_from_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\drawable_bottom_circle_2.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\drawable\\bottom_circle_2.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_pending.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\layout\\fragment_pending.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_add_photo_alternate_24.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\drawable\\ic_baseline_add_photo_alternate_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_completed.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\layout\\fragment_completed.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_close.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\drawable\\ic_close.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\anim_slide_in_up.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\anim\\slide_in_up.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_return.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\layout\\fragment_return.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\font_poppins_regular.ttf.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\font\\poppins_regular.ttf"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\xml_provider_paths.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\xml\\provider_paths.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\layout_show_done_dialog.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\layout\\show_done_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_dashboard.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\layout\\fragment_dashboard.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\drawable_dialog_button_blue.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\drawable\\dialog_button_blue.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_dashboard_24.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\drawable\\ic_dashboard_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_account.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\drawable\\ic_account.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_launcher.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\layout\\activity_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_event_note.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\drawable\\ic_event_note.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\drawable_completed.png.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\drawable\\completed.png"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_local_library_24.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\drawable\\ic_baseline_local_library_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\font_poppins_medium.ttf.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\font\\poppins_medium.ttf"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg_layout.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\drawable\\bg_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\navigation_nav_graph.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\navigation\\nav_graph.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\merged_res\\debug\\layout_login_fragment.xml.flat",
+        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\layout\\login_fragment.xml"
+    }
+]
