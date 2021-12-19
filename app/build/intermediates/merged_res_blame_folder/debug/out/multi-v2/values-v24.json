@@ -4,7 +4,17 @@
             "outputFile": "/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "/Users/pranjuldhiman/.gradle/caches/transforms-3/fb46bc177808642a9a5002139b9ae92c/transformed/media-1.0.0/res/values-v24/values-v24.xml",
+                    "source": "/Users/pranjuldhiman/.gradle/caches/transforms-3/e3a635a980fab68e5b8997597a830023/transformed/appcompat-1.4.0/res/values-v24/values-v24.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,212",
+                        "endColumns": "156,134",
+                        "endOffsets": "207,342"
+                    }
+                },
+                {
+                    "source": "/Users/pranjuldhiman/.gradle/caches/transforms-3/a7b2dc53e6180195cbc87f27d13c011f/transformed/media-1.0.0/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -18,16 +28,6 @@
                         "startOffsets": "347,413,474,540",
                         "endColumns": "65,60,65,66",
                         "endOffsets": "408,469,535,602"
-                    }
-                },
-                {
-                    "source": "/Users/pranjuldhiman/.gradle/caches/transforms-3/d9d4712207aa32a424bab9b8bde42e2b/transformed/appcompat-1.4.0/res/values-v24/values-v24.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,212",
-                        "endColumns": "156,134",
-                        "endOffsets": "207,342"
                     }
                 }
             ]

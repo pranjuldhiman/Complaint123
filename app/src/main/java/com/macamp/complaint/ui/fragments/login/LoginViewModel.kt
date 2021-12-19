@@ -17,4 +17,14 @@ class LoginViewModel : ViewModel() {
             emit(Resource.error(data = api.login(email, password), message = e.localizedMessage?:"Something went Wrong!"))
         }
     }
+    fun deviceToken(userId: String, fcmToken: String) = liveData {
+        emit(Resource.loading(data = null))
+        try {
+            val url = "device_token_update/$userId"
+            emit(Resource.success(data = api.deviceTokenUpdated(url, fcmToken)))
+        } catch (e: Exception) {
+            emit(Resource.error(data = null, message = e.localizedMessage))
+        }
+    }
+
 }

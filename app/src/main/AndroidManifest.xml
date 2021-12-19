@@ -15,6 +15,22 @@
         android:theme="@style/Theme.Complaint"
         android:usesCleartextTraffic="true">
 
+        <service
+            android:name=".data.MyFirebaseMessagingService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1">
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_launcher_foreground" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/lightGreen" />
+
         <activity
             android:name=".ui.activities.PendingActivity"
             android:exported="false" />

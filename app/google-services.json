@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "288856704565",
+    "project_id": "nns24-aijaz",
+    "storage_bucket": "nns24-aijaz.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:288856704565:android:7da19684986dd190ab137c",
+        "android_client_info": {
+          "package_name": "com.macamp.complaint"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "288856704565-eubmqmj1h2ajecphmea7akvv68bp86ab.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-9GwufP5tvHcAn-dR_IYQK5NmaZ4JN9c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "288856704565-eubmqmj1h2ajecphmea7akvv68bp86ab.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

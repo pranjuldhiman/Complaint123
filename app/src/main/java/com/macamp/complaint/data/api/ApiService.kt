@@ -35,10 +35,17 @@ interface ApiService {
 
     @FormUrlEncoded
     @PUT
+    suspend fun deviceTokenUpdated(
+        @Url url: String,
+        @Field("device_token") deviceToken: String
+    ): Response<ResponseBody>
+
+    @FormUrlEncoded
+    @PUT
     suspend fun actionReturnBack(
         @Url url: String,
         @Field("reasion") reason: String,
-        @Field("id") id: String,
+        @Field("id") id: String
     ): Response<ResponseBody>
 
     @GET

@@ -7,6 +7,7 @@ object Constants {
 
     const val UESR_ID = "USER_ID"
     const val USER_DATA = "USER_DATA"
+    const val FCM_TOKEN = "FCM_TOKEN"
     const val DASHBOARD = "Dashboard"
     const val RETURN = "Return Complaints"
     const val COMPLAINTS = "All Complaints"

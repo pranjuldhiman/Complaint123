@@ -1,6 +1,7 @@
 package com.macamp.complaint.ui.activities
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.AppCompatTextView
@@ -9,6 +10,8 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.messaging.FirebaseMessaging
 import com.macamp.complaint.BuildConfig
 import com.macamp.complaint.R
 import com.macamp.complaint.databinding.ActivityMainBinding
@@ -20,7 +23,19 @@ import timber.log.Timber.DebugTree
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+    private fun getDeviceToken() {
+        FirebaseMessaging.getInstance().token.addOnCompleteListener(OnCompleteListener { task ->
+            if (!task.isSuccessful) {
+                Log.w("TAG", "Fetching FCM registration token failed", task.exception)
+                return@OnCompleteListener
+            }
+            // Get new FCM registration token
+            val token = task.result
+            Preferences.prefs?.saveValue(Constants.FCM_TOKEN, token)
+            Log.e("TAG", "Fetching FCM registration token : $token")
 
+        })
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
@@ -38,6 +53,9 @@ class MainActivity : AppCompatActivity() {
         navGraph.startDestination = R.id.dashboardFragment
         navController.graph = navGraph
         navigationMenu(navController)
+
+        getDeviceToken()
+
         // Set the toolbar
 //        setSupportActionBar(binding.activityMainToolbar)
 //

@@ -43,6 +43,7 @@
     <string name="submitted_complaints">Submitted Complaints</string>
     <string name="profile">Profile</string>
     <string name="logout">Logout</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
     <string name="copyrights_are_reserved">Copyrights are Reserved</string>
     <string name="ward_no">Ward No.</string>
     <string name="username_caps">USERNAME</string>
