@@ -64,6 +64,9 @@ public final class ActivityPendingBinding implements ViewBinding {
   public final AppCompatButton returnBtn;
 
   @NonNull
+  public final AppCompatTextView shareBtn;
+
+  @NonNull
   public final LinearLayoutCompat showBtnLayout;
 
   @NonNull
@@ -90,10 +93,11 @@ public final class ActivityPendingBinding implements ViewBinding {
       @NonNull AppCompatImageView ivAddress, @NonNull AppCompatTextView ivBookmark,
       @NonNull AppCompatTextView ivLike, @NonNull AppCompatTextView ivRatingBar,
       @NonNull AppCompatTextView ivStar, @NonNull AppCompatImageView ivUser,
-      @NonNull AppCompatButton returnBtn, @NonNull LinearLayoutCompat showBtnLayout,
-      @NonNull AppCompatTextView statusTxt, @NonNull AppCompatTextView timeDateTxt,
-      @NonNull AppCompatTextView tvAddress, @NonNull AppCompatTextView tvComplaint,
-      @NonNull AppCompatTextView tvId, @NonNull AppCompatTextView tvName) {
+      @NonNull AppCompatButton returnBtn, @NonNull AppCompatTextView shareBtn,
+      @NonNull LinearLayoutCompat showBtnLayout, @NonNull AppCompatTextView statusTxt,
+      @NonNull AppCompatTextView timeDateTxt, @NonNull AppCompatTextView tvAddress,
+      @NonNull AppCompatTextView tvComplaint, @NonNull AppCompatTextView tvId,
+      @NonNull AppCompatTextView tvName) {
     this.rootView = rootView;
     this.bottomCardView = bottomCardView;
     this.cardView = cardView;
@@ -108,6 +112,7 @@ public final class ActivityPendingBinding implements ViewBinding {
     this.ivStar = ivStar;
     this.ivUser = ivUser;
     this.returnBtn = returnBtn;
+    this.shareBtn = shareBtn;
     this.showBtnLayout = showBtnLayout;
     this.statusTxt = statusTxt;
     this.timeDateTxt = timeDateTxt;
@@ -222,6 +227,12 @@ public final class ActivityPendingBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.shareBtn;
+      AppCompatTextView shareBtn = ViewBindings.findChildViewById(rootView, id);
+      if (shareBtn == null) {
+        break missingId;
+      }
+
       id = R.id.showBtnLayout;
       LinearLayoutCompat showBtnLayout = ViewBindings.findChildViewById(rootView, id);
       if (showBtnLayout == null) {
@@ -266,8 +277,8 @@ public final class ActivityPendingBinding implements ViewBinding {
 
       return new ActivityPendingBinding((ScrollView) rootView, bottomCardView, cardView, doneBtn,
           guideline2, header, imageViewSelect, ivAddress, ivBookmark, ivLike, ivRatingBar, ivStar,
-          ivUser, returnBtn, showBtnLayout, statusTxt, timeDateTxt, tvAddress, tvComplaint, tvId,
-          tvName);
+          ivUser, returnBtn, shareBtn, showBtnLayout, statusTxt, timeDateTxt, tvAddress,
+          tvComplaint, tvId, tvName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

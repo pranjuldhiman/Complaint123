@@ -13,16 +13,21 @@ class ComplaintsAdapter(
     private val list: ArrayList<Complaints>,
     private val isPending: Boolean,
     private val context: Context,
+    private val onItemClick: (ArrayList<Complaints>) -> Unit
 ) :
     RecyclerView.Adapter<ComplaintsAdapter.RecyclerHolder>() {
     lateinit var binding: LayoutItemBinding
-//    lateinit var binding: ItemLayoutBinding
+    private val selectedList: ArrayList<Complaints> = ArrayList()
+
+    //    lateinit var binding: ItemLayoutBinding
 
     class RecyclerHolder(var binding: LayoutItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(
             complaints: Complaints,
             isPending: Boolean,
             context: Context,
+            onItemClick: (ArrayList<Complaints>) -> Unit,
+            selectedList: ArrayList<Complaints>,
         ) {
             binding.apply {
                 val complaintNo = "Complaint Id:- ${complaints.id}"
@@ -37,8 +42,27 @@ class ComplaintsAdapter(
                     putExtra("data", complaints)
                 }
             }
+            binding.checkBox.setOnCheckedChangeListener { _, b ->
+                if (binding.checkBox.isChecked) {
+                    complaints.isSelected = true
+                    selectedList.add(complaints)
+                    onItemClick(selectedList)
+                } else {
+                    complaints.isSelected = false
+                    selectedList.remove(complaints)
+                    onItemClick(selectedList)
+                }
+            }
 
         }
+    }
+
+    override fun getItemId(position: Int): Long {
+        return position.toLong()
+    }
+
+    override fun getItemViewType(position: Int): Int {
+        return position
     }
 
     override fun onCreateViewHolder(
@@ -50,7 +74,7 @@ class ComplaintsAdapter(
     }
 
     override fun onBindViewHolder(holder: RecyclerHolder, position: Int) {
-        holder.bind(list[position], isPending, context)
+        holder.bind(list[position], isPending, context, onItemClick, selectedList)
     }
 
     override fun getItemCount() = list.size

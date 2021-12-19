@@ -8,8 +8,10 @@ object Constants {
     const val UESR_ID = "USER_ID"
     const val USER_DATA = "USER_DATA"
     const val DASHBOARD = "Dashboard"
+    const val RETURN = "Return Complaints"
     const val COMPLAINTS = "All Complaints"
     const val COMPLETED = "Completed Complaints"
+    const val RESOLVED = "Resolved Complaints"
     const val PENDING = "Pending Complaints"
     const val SUBMITTED = "Submitted Complaints"
 

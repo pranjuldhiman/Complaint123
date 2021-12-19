@@ -14,7 +14,7 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="MyDialogTheme" parent="android:Theme.DeviceDefault.Dialog.NoActionBar">
+    <style name="MyDialogTheme" parent="android:Theme.DeviceDefault.Light.Dialog.NoActionBar">
         <item name="android:windowBackground">@null</item>
         <item name="android:windowNoTitle">false</item>
         <item name="android:windowIsFloating">true</item>

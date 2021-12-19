@@ -13,12 +13,16 @@ class UploadViewModel : ViewModel() {
     fun uploadImage(filePath: String?, complaintsId: String) = liveData {
         emit(Resource.loading(data = null))
         try {
-
             val url = "cs_work_submit/$complaintsId"
-            emit(Resource.success(data = api.workDoneProcess(url, getBodyForImage(filePath))))
+            if (filePath == "") {
+                emit(Resource.success(data = api.workDoneProcessWithoutFile(url)))
+            } else {
+                emit(Resource.success(data = api.workDoneProcess(url, getBodyForImage(filePath))))
+            }
         } catch (e: Exception) {
             emit(Resource.error(data = null, message = e.localizedMessage))
         }
+
     }
 
     fun actionComplaints(id: String, reason: String) = liveData {

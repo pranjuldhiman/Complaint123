@@ -35,5 +35,6 @@ data class Complaints(
     @SerializedName("ward_no")
     val wardNo: String,
     @SerializedName("work_done_img")
-    val workDoneImg: Any?
+    val workDoneImg: Any?,
+    var isSelected: Boolean?=null
 ) : Serializable

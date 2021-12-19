@@ -4,6 +4,7 @@ package com.macamp.complaint.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatTextView;
@@ -20,6 +21,9 @@ public final class LayoutItemBinding implements ViewBinding {
   private final CardView rootView;
 
   @NonNull
+  public final CheckBox checkBox;
+
+  @NonNull
   public final AppCompatTextView tvComplaint;
 
   @NonNull
@@ -31,10 +35,11 @@ public final class LayoutItemBinding implements ViewBinding {
   @NonNull
   public final AppCompatTextView tvStatus;
 
-  private LayoutItemBinding(@NonNull CardView rootView, @NonNull AppCompatTextView tvComplaint,
-      @NonNull AppCompatTextView tvId, @NonNull AppCompatTextView tvName,
-      @NonNull AppCompatTextView tvStatus) {
+  private LayoutItemBinding(@NonNull CardView rootView, @NonNull CheckBox checkBox,
+      @NonNull AppCompatTextView tvComplaint, @NonNull AppCompatTextView tvId,
+      @NonNull AppCompatTextView tvName, @NonNull AppCompatTextView tvStatus) {
     this.rootView = rootView;
+    this.checkBox = checkBox;
     this.tvComplaint = tvComplaint;
     this.tvId = tvId;
     this.tvName = tvName;
@@ -68,6 +73,12 @@ public final class LayoutItemBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.checkBox;
+      CheckBox checkBox = ViewBindings.findChildViewById(rootView, id);
+      if (checkBox == null) {
+        break missingId;
+      }
+
       id = R.id.tv_complaint;
       AppCompatTextView tvComplaint = ViewBindings.findChildViewById(rootView, id);
       if (tvComplaint == null) {
@@ -92,7 +103,8 @@ public final class LayoutItemBinding implements ViewBinding {
         break missingId;
       }
 
-      return new LayoutItemBinding((CardView) rootView, tvComplaint, tvId, tvName, tvStatus);
+      return new LayoutItemBinding((CardView) rootView, checkBox, tvComplaint, tvId, tvName,
+          tvStatus);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

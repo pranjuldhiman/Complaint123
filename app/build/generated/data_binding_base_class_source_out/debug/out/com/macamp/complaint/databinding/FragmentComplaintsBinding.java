@@ -4,10 +4,13 @@ package com.macamp.complaint.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.LinearLayoutCompat;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.macamp.complaint.R;
@@ -17,20 +20,33 @@ import java.lang.String;
 
 public final class FragmentComplaintsBinding implements ViewBinding {
   @NonNull
-  private final FrameLayout rootView;
+  private final ConstraintLayout rootView;
+
+  @NonNull
+  public final LinearLayoutCompat noDataImage;
 
   @NonNull
   public final RecyclerView recyclerView;
 
-  private FragmentComplaintsBinding(@NonNull FrameLayout rootView,
-      @NonNull RecyclerView recyclerView) {
+  @NonNull
+  public final AppCompatButton shareBtn;
+
+  @NonNull
+  public final SwipeRefreshLayout swipeRefreshLayout;
+
+  private FragmentComplaintsBinding(@NonNull ConstraintLayout rootView,
+      @NonNull LinearLayoutCompat noDataImage, @NonNull RecyclerView recyclerView,
+      @NonNull AppCompatButton shareBtn, @NonNull SwipeRefreshLayout swipeRefreshLayout) {
     this.rootView = rootView;
+    this.noDataImage = noDataImage;
     this.recyclerView = recyclerView;
+    this.shareBtn = shareBtn;
+    this.swipeRefreshLayout = swipeRefreshLayout;
   }
 
   @Override
   @NonNull
-  public FrameLayout getRoot() {
+  public ConstraintLayout getRoot() {
     return rootView;
   }
 
@@ -55,13 +71,32 @@ public final class FragmentComplaintsBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.noDataImage;
+      LinearLayoutCompat noDataImage = ViewBindings.findChildViewById(rootView, id);
+      if (noDataImage == null) {
+        break missingId;
+      }
+
       id = R.id.recyclerView;
       RecyclerView recyclerView = ViewBindings.findChildViewById(rootView, id);
       if (recyclerView == null) {
         break missingId;
       }
 
-      return new FragmentComplaintsBinding((FrameLayout) rootView, recyclerView);
+      id = R.id.shareBtn;
+      AppCompatButton shareBtn = ViewBindings.findChildViewById(rootView, id);
+      if (shareBtn == null) {
+        break missingId;
+      }
+
+      id = R.id.swipeRefreshLayout;
+      SwipeRefreshLayout swipeRefreshLayout = ViewBindings.findChildViewById(rootView, id);
+      if (swipeRefreshLayout == null) {
+        break missingId;
+      }
+
+      return new FragmentComplaintsBinding((ConstraintLayout) rootView, noDataImage, recyclerView,
+          shareBtn, swipeRefreshLayout);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

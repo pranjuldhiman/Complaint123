@@ -1,6 +1,7 @@
 package com.macamp.complaint.ui.fragments.resolvedComplaints
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,6 +12,7 @@ import com.macamp.complaint.data.model.Complaints
 import com.macamp.complaint.databinding.FragmentPendingBinding
 import com.macamp.complaint.ui.fragments.BaseFragment
 import com.macamp.complaint.ui.fragments.viewModel.ComplaintsViewModel
+import com.macamp.complaint.utils.GetComplaintsListener
 import com.macamp.complaint.utils.getUserInfo
 
 class ResolvedFragment : BaseFragment() {
@@ -29,7 +31,9 @@ class ResolvedFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        complaintsAdapter = ComplaintsAdapter(list,isPending = false,context =  requireActivity())
+        complaintsAdapter = ComplaintsAdapter(list,isPending = false,context =  requireActivity()){ list ->
+            Log.e("TAG", "onSelectedItems: ${list.size}")
+        }
         binding.recyclerView.apply {
             adapter = complaintsAdapter
         }
@@ -40,7 +44,7 @@ class ResolvedFragment : BaseFragment() {
     private fun getResolvedComplaints() {
         val user = getUserInfo()
 
-        viewModel.getInProcessComplaints(user?.id.toString()).observe(viewLifecycleOwner) {
+        viewModel.getCompletedComplaints(user?.id.toString()).observe(viewLifecycleOwner) {
             when (it.status) {
                 Status.LOADING -> {
                     showProgress()

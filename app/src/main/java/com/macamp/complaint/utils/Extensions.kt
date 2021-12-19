@@ -9,7 +9,10 @@ import android.util.Patterns
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
+import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.DataSource
@@ -26,9 +29,9 @@ import java.io.ByteArrayOutputStream
 import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
+import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.util.*
-import java.text.ParseException
 
 
 inline fun <reified T : Activity> Context.startActivity(block: Intent.() -> Unit = {}) {
@@ -42,6 +45,52 @@ fun Activity.toast(msg: String) {
 
 fun Fragment.toast(msg: String) {
     Toast.makeText(requireActivity(), msg, Toast.LENGTH_SHORT).show()
+}
+
+fun <T : RecyclerView.ViewHolder> T.listen(event: (position: Int, type: Int) -> Unit): T {
+    itemView.setOnClickListener {
+        event.invoke(adapterPosition, itemViewType)
+    }
+    return this
+}
+
+ fun Activity.sendMessage(message: String) {
+
+    // Creating new intent
+    val intent = Intent(Intent.ACTION_SEND)
+    intent.type = "text/plain"
+    intent.setPackage("com.whatsapp")
+
+    // Give your message here
+    intent.putExtra(Intent.EXTRA_TEXT, message)
+
+    // Checking whether Whatsapp is installed or not
+    if (intent.resolveActivity(packageManager) == null) {
+        toast("Please install whatsapp first.")
+        return
+    }
+
+    // Starting Whatsapp
+    startActivity(intent)
+}
+ fun FragmentActivity.sendMessage(message: String) {
+
+    // Creating new intent
+    val intent = Intent(Intent.ACTION_SEND)
+    intent.type = "text/plain"
+    intent.setPackage("com.whatsapp")
+
+    // Give your message here
+    intent.putExtra(Intent.EXTRA_TEXT, message)
+
+    // Checking whether Whatsapp is installed or not
+    if (intent.resolveActivity(packageManager) == null) {
+        toast("Please install whatsapp first.")
+        return
+    }
+
+    // Starting Whatsapp
+    startActivity(intent)
 }
 
 //get user object in local
@@ -102,7 +151,6 @@ fun Date.getConvertedDate(
     return result
 
 }
-
 
 
 fun ImageView.loadImageWithoutShimmer(url: String = "") {

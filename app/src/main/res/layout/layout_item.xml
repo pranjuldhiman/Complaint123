@@ -13,12 +13,22 @@
         android:layout_height="match_parent"
         android:layout_margin="@dimen/_12sdp">
 
+        <CheckBox
+            android:visibility="visible"
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_id"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_30sdp"
             android:textColor="#424242"
             android:textSize="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/checkBox"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"

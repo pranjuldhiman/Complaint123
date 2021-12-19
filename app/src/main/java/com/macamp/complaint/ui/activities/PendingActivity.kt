@@ -3,6 +3,7 @@ package com.macamp.complaint.ui.activities
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.Dialog
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
@@ -16,25 +17,25 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import androidx.appcompat.widget.AppCompatEditText
 import androidx.appcompat.widget.AppCompatImageView
+import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.github.dhaval2404.imagepicker.ImagePicker
-import com.macamp.complaint.BuildConfig
 import com.macamp.complaint.R
 import com.macamp.complaint.data.api.Status
 import com.macamp.complaint.data.model.Complaints
 import com.macamp.complaint.databinding.ActivityPendingBinding
-import com.macamp.complaint.utils.UriPathHelper
-import com.macamp.complaint.utils.getConvertedDate
-import com.macamp.complaint.utils.loadImageWithoutShimmer
-import com.macamp.complaint.utils.toast
-import timber.log.Timber
+import com.macamp.complaint.utils.*
 import java.util.*
+import org.greenrobot.eventbus.EventBus
+import org.greenrobot.eventbus.Subscribe
+import org.greenrobot.eventbus.ThreadMode
+
 
 @SuppressLint("SetTextI18n")
 class PendingActivity : AppCompatActivity() {
     lateinit var binding: ActivityPendingBinding
     var complaints: Complaints? = null
     val viewModel by viewModels<UploadViewModel>()
-    private var filePath: String? = null
+    private var filePath: String? = ""
     private lateinit var imageView: AppCompatImageView
     private var mProgressDialog: Dialog? = null
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,8 +45,10 @@ class PendingActivity : AppCompatActivity() {
 
 
         binding.showBtnLayout.visibility =
-            if (intent.getBooleanExtra("isPending",false)) View.VISIBLE else View.GONE
-
+            if (intent.getBooleanExtra("isPending", false)) View.VISIBLE else View.GONE
+        if (!EventBus.getDefault().isRegistered(this)) {
+            EventBus.getDefault().register(this);
+        }
         val data = intent.getSerializableExtra("data") as Complaints
         setData(data)
         onClickEvents()
@@ -53,7 +56,21 @@ class PendingActivity : AppCompatActivity() {
 
     private fun onClickEvents() {
         binding.doneBtn.setOnClickListener { showDialog() }
-        binding.doneBtn.setOnClickListener { showReturnDialog() }
+        binding.returnBtn.setOnClickListener { showReturnDialog() }
+        val shareMessageOnWhatsApp = "Complaint : ${complaints?.complaint}\n" +
+                "Complaint ID\t: ${complaints?.id}\n" +
+                "Name\t: ${complaints?.name}\n" +
+                "Mobile : ${complaints?.mobile}\n" +
+                "Status\t: ${complaints?.status}\n" +
+                "Address\t : ${complaints?.address}\n" +
+                "Parshad\t : ${complaints?.parshad}\n" +
+                "Department\t: ${complaints?.department}\n" +
+                "Ward No : ${complaints?.wardNo}\n"
+        binding.shareBtn.setOnClickListener {
+            sendMessage(shareMessageOnWhatsApp)
+        }
+
+
     }
 
     private fun setData(data: Complaints?) {
@@ -120,7 +137,14 @@ class PendingActivity : AppCompatActivity() {
 
 
     }
-
+    override fun onStop() {
+        super.onStop()
+        EventBus.getDefault().unregister(this)
+    }
+    @Subscribe(threadMode = ThreadMode.MAIN,sticky = true)
+    fun onMessageEvent(isRefreshing: String?) {
+//        if (isRefreshing == "true")
+    }
     private fun returnBackApiCall(reason: String, id: String, dialog: Dialog) {
         viewModel.actionComplaints(id, reason).observe(this) {
             when (it.status) {
@@ -129,12 +153,15 @@ class PendingActivity : AppCompatActivity() {
                 }
                 Status.SUCCESS -> {
                     hideProgress()
+                    sendMessage()
+
                     it.data?.let { response ->
                         if (response.code() == 200) {
-                            toast(response.message())
+                            toast(response.body()?.string() ?: "Submitted")
                         }
                     }
                     dialog.dismiss()
+                    finish()
 
                 }
                 Status.ERROR -> {
@@ -163,6 +190,7 @@ class PendingActivity : AppCompatActivity() {
             }
         }
 
+
     private fun uploadImage(filePath: String?, dialog: Dialog) {
         viewModel.uploadImage(filePath, complaints?.id.toString()).observe(this) {
             when (it.status) {
@@ -171,12 +199,14 @@ class PendingActivity : AppCompatActivity() {
                 }
                 Status.SUCCESS -> {
                     hideProgress()
+                    sendMessage()
                     it.data?.let { response ->
                         if (response.code() == 200) {
-                            toast(response.message())
+                            toast(response.body()?.string() ?: "Submitted for approval")
                         }
                     }
                     dialog.dismiss()
+                    finish()
 
                 }
                 Status.ERROR -> {
@@ -185,7 +215,15 @@ class PendingActivity : AppCompatActivity() {
             }
         }
     }
-
+    // Send an Intent with an action named "custom-event-name". The Intent sent should
+    // be received by the ReceiverActivity.
+    private fun sendMessage() {
+        Log.d("sender", "Broadcasting message")
+        val intent = Intent("custom-event-name")
+        // You can also include some extra data.
+        intent.putExtra("message", "This is my message!")
+        LocalBroadcastManager.getInstance(this).sendBroadcast(intent)
+    }
     fun showProgress() {
 
         if (mProgressDialog == null) {

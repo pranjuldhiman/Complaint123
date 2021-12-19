@@ -1334,6 +1334,7 @@ color secondary_text_default_material_dark
 color secondary_text_default_material_light
 color secondary_text_disabled_material_dark
 color secondary_text_disabled_material_light
+color selectionColor
 color skyBlue
 color switch_thumb_disabled_material_dark
 color switch_thumb_disabled_material_light
@@ -2421,6 +2422,8 @@ dimen mtrl_tooltip_minHeight
 dimen mtrl_tooltip_minWidth
 dimen mtrl_tooltip_padding
 dimen mtrl_transition_shared_axis_slide_distance
+dimen nav_header_height
+dimen navigation_drawer_width
 dimen notification_action_icon_size
 dimen notification_action_text_size
 dimen notification_big_circle_margin
@@ -2565,6 +2568,8 @@ drawable avd_hide_password
 drawable avd_show_password
 drawable bg_layout
 drawable blue_circle
+drawable book
+drawable book_ic
 drawable bottom_circle
 drawable bottom_circle_2
 drawable btn_bg
@@ -2576,7 +2581,9 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable complete
 drawable completed
+drawable completed_ic
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -2608,6 +2615,7 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_photo_black_48dp
 drawable ic_photo_camera_black_48dp
+drawable ic_whatsapp_share_button
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -2643,6 +2651,9 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable orange_circle
+drawable pngegg
+drawable send
+drawable send_ic
 drawable test_custom_background
 drawable test_level_drawable
 drawable tooltip_frame_dark
@@ -2666,6 +2677,7 @@ drawable ucrop_vector_ic_crop
 drawable ucrop_vector_loader
 drawable ucrop_vector_loader_animated
 drawable ucrop_wrapper_controls_shape
+drawable whatsapp_ic
 font lucida_italic
 font poppins_medium
 font poppins_regular
@@ -2754,6 +2766,7 @@ id action_dashboardFragment
 id action_dashboardFragment_to_complaintsFragment
 id action_dashboardFragment_to_completedFragment
 id action_dashboardFragment_to_pendingFragment
+id action_dashboardFragment_to_returnFragment
 id action_dashboardFragment_to_submittedFragment
 id action_divider
 id action_image
@@ -2782,8 +2795,10 @@ id animateToStart
 id antiClockwise
 id anticipate
 id appCompatImageView
+id appCompatImageView12
 id appCompatImageView2
 id appCompatTextView
+id appCompatTextView12
 id appCompatTextView2
 id appCompatTextView3
 id appCompatTextView4
@@ -2824,6 +2839,7 @@ id center_vertical
 id chain
 id chains
 id chart_view
+id checkBox
 id checkbox
 id checked
 id chip
@@ -3073,6 +3089,7 @@ id navigation_header_container
 id never
 id neverCompleteToEnd
 id neverCompleteToStart
+id noDataImage
 id noScroll
 id noState
 id none
@@ -3119,6 +3136,8 @@ id recyclerView
 id resolvedComplaintsBtn
 id resolvedFragment
 id returnBtn
+id returnComplaintTxt
+id returnComplaintsBtn
 id returnFragment
 id returnTxt
 id reverseSawtooth
@@ -3154,6 +3173,7 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id selection_type
+id shareBtn
 id sharedValueSet
 id sharedValueUnset
 id shortcut
@@ -3202,6 +3222,7 @@ id submittedBtn
 id submittedComplaintTxt
 id submittedFragment
 id supportScrollUp
+id swipeRefreshLayout
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -3534,6 +3555,7 @@ string all_complaint_chart
 string all_complaints
 string all_completed_complaints
 string all_pending_complaints
+string all_return_complaints
 string all_submitted_complaints
 string all_yesterday_complaints
 string androidx_startup
@@ -3550,6 +3572,7 @@ string complaint_completed
 string complaint_details
 string complaint_id
 string complaints
+string completed_complaints
 string copyrights_are_reserved
 string created_date_amp_time
 string dashboard
@@ -3633,6 +3656,9 @@ string mtrl_picker_toggle_to_year_selection
 string name
 string nav_app_bar_navigate_up_description
 string nav_app_bar_open_drawer_description
+string navigation_drawer_close
+string navigation_drawer_open
+string nothing_found_here
 string nothing_here
 string parshad
 string password
@@ -3653,6 +3679,8 @@ string returnTxt
 string return_complaint
 string return_complaints
 string search_menu_title
+string share_on_whatsapp
+string share_selected_on_whatsapp
 string status
 string status_bar_notification_info_overflow
 string submit

@@ -16,12 +16,16 @@
     <string name="all_complaints">All Complaints</string>
     <string name="all_submitted_complaints">All Submitted Complaints</string>
     <string name="more_info">More Info</string>
-    <string name="all_completed_complaints">All Completed Complaints</string>
+    <string name="all_completed_complaints">All Resolved Complaints</string>
     <string name="all_pending_complaints">All Pending Complaints</string>
     <string name="all_yesterday_complaints">All Yesterday\'s Complaints</string>
     <string name="yesterday_s_pending_complaints">Yesterday\'s Pending Complaints</string>
     <string name="yesterday_completed_complaints">Yesterday\'s Completed Complaints</string>
     <string name="all_complaint_chart">All Complaint Chart</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
     <string name="id">Id</string>
     <string name="name">Name</string>
     <string name="complaints">Complaints</string>
@@ -37,7 +41,6 @@
     <string name="pending_complaints">Pending Complaints</string>
     <string name="return_complaints">Return Complaints</string>
     <string name="submitted_complaints">Submitted Complaints</string>
-    <string name="resolved_complaints">Resolved Complaints</string>
     <string name="profile">Profile</string>
     <string name="logout">Logout</string>
     <string name="copyrights_are_reserved">Copyrights are Reserved</string>
@@ -52,4 +55,10 @@
     <string name="please_enter_reason_for_the_return">Please enter reason for the return?</string>
     <string name="write_your_reason">write your reason</string>
     <string name="complaint_details">Complaint Details</string>
+    <string name="share_on_whatsapp">Share on Whatsapp</string>
+    <string name="share_selected_on_whatsapp">Share selected on WhatsApp</string>
+    <string name="nothing_found_here">Nothing found here!</string>
+    <string name="completed_complaints">Completed Complaints</string>
+    <string name="resolved_complaints">Resolved Complaints</string>
+    <string name="all_return_complaints">All Return Complaints</string>
 </resources>

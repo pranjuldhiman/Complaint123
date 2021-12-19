@@ -1,7 +1,7 @@
-com/macamp/complaint/databinding/LoginFragmentBinding.java
- com.macamp.complaint.databinding.LoginFragmentBinding
 com/macamp/complaint/databinding/ActivityLauncherBinding.java
  com.macamp.complaint.databinding.ActivityLauncherBinding
+com/macamp/complaint/databinding/LoginFragmentBinding.java
+ com.macamp.complaint.databinding.LoginFragmentBinding
 com/macamp/complaint/databinding/FragmentComplaintsBinding.java
  com.macamp.complaint.databinding.FragmentComplaintsBinding
 com/macamp/complaint/databinding/NavDrawerBinding.java
@@ -20,17 +20,17 @@ com/macamp/complaint/databinding/ShowDoneDialogBinding.java
  com.macamp.complaint.databinding.ShowDoneDialogBinding
 com/macamp/complaint/databinding/FragmentSubmittedBinding.java
  com.macamp.complaint.databinding.FragmentSubmittedBinding
-com/macamp/complaint/databinding/FragmentDashboardBinding.java
- com.macamp.complaint.databinding.FragmentDashboardBinding
+com/macamp/complaint/databinding/ActivityPendingBinding.java
+ com.macamp.complaint.databinding.ActivityPendingBinding
 com/macamp/complaint/databinding/FragmentPendingBinding.java
  com.macamp.complaint.databinding.FragmentPendingBinding
 com/macamp/complaint/databinding/LayoutItemBinding.java
  com.macamp.complaint.databinding.LayoutItemBinding
-com/macamp/complaint/databinding/ItemLayoutBinding.java
- com.macamp.complaint.databinding.ItemLayoutBinding
 com/macamp/complaint/databinding/FragmentResolvedBinding.java
  com.macamp.complaint.databinding.FragmentResolvedBinding
+com/macamp/complaint/databinding/ItemLayoutBinding.java
+ com.macamp.complaint.databinding.ItemLayoutBinding
 com/macamp/complaint/databinding/LoaderLayoutBinding.java
  com.macamp.complaint.databinding.LoaderLayoutBinding
-com/macamp/complaint/databinding/ActivityPendingBinding.java
- com.macamp.complaint.databinding.ActivityPendingBinding
+com/macamp/complaint/databinding/FragmentDashboardBinding.java
+ com.macamp.complaint.databinding.FragmentDashboardBinding

@@ -6,7 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatEditText;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -28,19 +30,28 @@ public final class ShowReturnDialogBinding implements ViewBinding {
   public final CardView cardView2;
 
   @NonNull
+  public final AppCompatImageView closeBtn;
+
+  @NonNull
   public final AppCompatTextView reasonTxt;
 
   @NonNull
   public final AppCompatEditText returnTxt;
 
+  @NonNull
+  public final AppCompatButton submitBtn;
+
   private ShowReturnDialogBinding(@NonNull ConstraintLayout rootView,
       @NonNull AppCompatTextView appCompatTextView5, @NonNull CardView cardView2,
-      @NonNull AppCompatTextView reasonTxt, @NonNull AppCompatEditText returnTxt) {
+      @NonNull AppCompatImageView closeBtn, @NonNull AppCompatTextView reasonTxt,
+      @NonNull AppCompatEditText returnTxt, @NonNull AppCompatButton submitBtn) {
     this.rootView = rootView;
     this.appCompatTextView5 = appCompatTextView5;
     this.cardView2 = cardView2;
+    this.closeBtn = closeBtn;
     this.reasonTxt = reasonTxt;
     this.returnTxt = returnTxt;
+    this.submitBtn = submitBtn;
   }
 
   @Override
@@ -82,6 +93,12 @@ public final class ShowReturnDialogBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.closeBtn;
+      AppCompatImageView closeBtn = ViewBindings.findChildViewById(rootView, id);
+      if (closeBtn == null) {
+        break missingId;
+      }
+
       id = R.id.reasonTxt;
       AppCompatTextView reasonTxt = ViewBindings.findChildViewById(rootView, id);
       if (reasonTxt == null) {
@@ -94,8 +111,14 @@ public final class ShowReturnDialogBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.submitBtn;
+      AppCompatButton submitBtn = ViewBindings.findChildViewById(rootView, id);
+      if (submitBtn == null) {
+        break missingId;
+      }
+
       return new ShowReturnDialogBinding((ConstraintLayout) rootView, appCompatTextView5, cardView2,
-          reasonTxt, returnTxt);
+          closeBtn, reasonTxt, returnTxt, submitBtn);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

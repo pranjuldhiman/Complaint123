@@ -4,13 +4,13 @@ package com.macamp.complaint.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ScrollView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.constraintlayout.widget.Guideline;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.github.mikephil.charting.charts.PieChart;
@@ -22,7 +22,7 @@ import java.lang.String;
 
 public final class FragmentDashboardBinding implements ViewBinding {
   @NonNull
-  private final ScrollView rootView;
+  private final SwipeRefreshLayout rootView;
 
   @NonNull
   public final AppCompatTextView AllComplaintTxt;
@@ -37,10 +37,16 @@ public final class FragmentDashboardBinding implements ViewBinding {
   public final AppCompatImageView appCompatImageView;
 
   @NonNull
+  public final AppCompatImageView appCompatImageView12;
+
+  @NonNull
   public final AppCompatImageView appCompatImageView2;
 
   @NonNull
   public final AppCompatTextView appCompatTextView;
+
+  @NonNull
+  public final AppCompatTextView appCompatTextView12;
 
   @NonNull
   public final AppCompatTextView appCompatTextView2;
@@ -88,10 +94,19 @@ public final class FragmentDashboardBinding implements ViewBinding {
   public final PieChart pieChart;
 
   @NonNull
+  public final AppCompatTextView returnComplaintTxt;
+
+  @NonNull
+  public final MaterialCardView returnComplaintsBtn;
+
+  @NonNull
   public final MaterialCardView submittedBtn;
 
   @NonNull
   public final AppCompatTextView submittedComplaintTxt;
+
+  @NonNull
+  public final SwipeRefreshLayout swipeRefreshLayout;
 
   @NonNull
   public final MaterialCardView yesterdayComplaintsBtn;
@@ -108,19 +123,22 @@ public final class FragmentDashboardBinding implements ViewBinding {
   @NonNull
   public final AppCompatTextView yesterdayPendingTxt;
 
-  private FragmentDashboardBinding(@NonNull ScrollView rootView,
+  private FragmentDashboardBinding(@NonNull SwipeRefreshLayout rootView,
       @NonNull AppCompatTextView AllComplaintTxt, @NonNull AppCompatTextView AllComplaintTxt7,
       @NonNull MaterialCardView allComplaintsBtn, @NonNull AppCompatImageView appCompatImageView,
+      @NonNull AppCompatImageView appCompatImageView12,
       @NonNull AppCompatImageView appCompatImageView2, @NonNull AppCompatTextView appCompatTextView,
-      @NonNull AppCompatTextView appCompatTextView2, @NonNull AppCompatTextView appCompatTextView3,
-      @NonNull AppCompatTextView appCompatTextView4, @NonNull AppCompatTextView appCompatTextView6,
-      @NonNull AppCompatTextView appCompatTextView7, @NonNull AppCompatTextView appCompatTextView8,
-      @NonNull LinearLayoutCompat chartView, @NonNull MaterialCardView completedBtn,
-      @NonNull AppCompatTextView completedComplaintsTxt, @NonNull Guideline guideline3,
-      @NonNull AppCompatImageView image3, @NonNull AppCompatImageView image4,
-      @NonNull MaterialCardView pendingBtn, @NonNull AppCompatTextView pendingComplaintsTxt,
-      @NonNull PieChart pieChart, @NonNull MaterialCardView submittedBtn,
-      @NonNull AppCompatTextView submittedComplaintTxt,
+      @NonNull AppCompatTextView appCompatTextView12, @NonNull AppCompatTextView appCompatTextView2,
+      @NonNull AppCompatTextView appCompatTextView3, @NonNull AppCompatTextView appCompatTextView4,
+      @NonNull AppCompatTextView appCompatTextView6, @NonNull AppCompatTextView appCompatTextView7,
+      @NonNull AppCompatTextView appCompatTextView8, @NonNull LinearLayoutCompat chartView,
+      @NonNull MaterialCardView completedBtn, @NonNull AppCompatTextView completedComplaintsTxt,
+      @NonNull Guideline guideline3, @NonNull AppCompatImageView image3,
+      @NonNull AppCompatImageView image4, @NonNull MaterialCardView pendingBtn,
+      @NonNull AppCompatTextView pendingComplaintsTxt, @NonNull PieChart pieChart,
+      @NonNull AppCompatTextView returnComplaintTxt, @NonNull MaterialCardView returnComplaintsBtn,
+      @NonNull MaterialCardView submittedBtn, @NonNull AppCompatTextView submittedComplaintTxt,
+      @NonNull SwipeRefreshLayout swipeRefreshLayout,
       @NonNull MaterialCardView yesterdayComplaintsBtn,
       @NonNull AppCompatTextView yesterdayComplaintsTxt,
       @NonNull MaterialCardView yesterdayCompletedBtn,
@@ -131,8 +149,10 @@ public final class FragmentDashboardBinding implements ViewBinding {
     this.AllComplaintTxt7 = AllComplaintTxt7;
     this.allComplaintsBtn = allComplaintsBtn;
     this.appCompatImageView = appCompatImageView;
+    this.appCompatImageView12 = appCompatImageView12;
     this.appCompatImageView2 = appCompatImageView2;
     this.appCompatTextView = appCompatTextView;
+    this.appCompatTextView12 = appCompatTextView12;
     this.appCompatTextView2 = appCompatTextView2;
     this.appCompatTextView3 = appCompatTextView3;
     this.appCompatTextView4 = appCompatTextView4;
@@ -148,8 +168,11 @@ public final class FragmentDashboardBinding implements ViewBinding {
     this.pendingBtn = pendingBtn;
     this.pendingComplaintsTxt = pendingComplaintsTxt;
     this.pieChart = pieChart;
+    this.returnComplaintTxt = returnComplaintTxt;
+    this.returnComplaintsBtn = returnComplaintsBtn;
     this.submittedBtn = submittedBtn;
     this.submittedComplaintTxt = submittedComplaintTxt;
+    this.swipeRefreshLayout = swipeRefreshLayout;
     this.yesterdayComplaintsBtn = yesterdayComplaintsBtn;
     this.yesterdayComplaintsTxt = yesterdayComplaintsTxt;
     this.yesterdayCompletedBtn = yesterdayCompletedBtn;
@@ -159,7 +182,7 @@ public final class FragmentDashboardBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public ScrollView getRoot() {
+  public SwipeRefreshLayout getRoot() {
     return rootView;
   }
 
@@ -208,6 +231,12 @@ public final class FragmentDashboardBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.appCompatImageView12;
+      AppCompatImageView appCompatImageView12 = ViewBindings.findChildViewById(rootView, id);
+      if (appCompatImageView12 == null) {
+        break missingId;
+      }
+
       id = R.id.appCompatImageView2;
       AppCompatImageView appCompatImageView2 = ViewBindings.findChildViewById(rootView, id);
       if (appCompatImageView2 == null) {
@@ -217,6 +246,12 @@ public final class FragmentDashboardBinding implements ViewBinding {
       id = R.id.appCompatTextView;
       AppCompatTextView appCompatTextView = ViewBindings.findChildViewById(rootView, id);
       if (appCompatTextView == null) {
+        break missingId;
+      }
+
+      id = R.id.appCompatTextView12;
+      AppCompatTextView appCompatTextView12 = ViewBindings.findChildViewById(rootView, id);
+      if (appCompatTextView12 == null) {
         break missingId;
       }
 
@@ -310,6 +345,18 @@ public final class FragmentDashboardBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.returnComplaintTxt;
+      AppCompatTextView returnComplaintTxt = ViewBindings.findChildViewById(rootView, id);
+      if (returnComplaintTxt == null) {
+        break missingId;
+      }
+
+      id = R.id.returnComplaintsBtn;
+      MaterialCardView returnComplaintsBtn = ViewBindings.findChildViewById(rootView, id);
+      if (returnComplaintsBtn == null) {
+        break missingId;
+      }
+
       id = R.id.submittedBtn;
       MaterialCardView submittedBtn = ViewBindings.findChildViewById(rootView, id);
       if (submittedBtn == null) {
@@ -321,6 +368,8 @@ public final class FragmentDashboardBinding implements ViewBinding {
       if (submittedComplaintTxt == null) {
         break missingId;
       }
+
+      SwipeRefreshLayout swipeRefreshLayout = (SwipeRefreshLayout) rootView;
 
       id = R.id.yesterdayComplaintsBtn;
       MaterialCardView yesterdayComplaintsBtn = ViewBindings.findChildViewById(rootView, id);
@@ -352,13 +401,15 @@ public final class FragmentDashboardBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentDashboardBinding((ScrollView) rootView, AllComplaintTxt, AllComplaintTxt7,
-          allComplaintsBtn, appCompatImageView, appCompatImageView2, appCompatTextView,
-          appCompatTextView2, appCompatTextView3, appCompatTextView4, appCompatTextView6,
-          appCompatTextView7, appCompatTextView8, chartView, completedBtn, completedComplaintsTxt,
-          guideline3, image3, image4, pendingBtn, pendingComplaintsTxt, pieChart, submittedBtn,
-          submittedComplaintTxt, yesterdayComplaintsBtn, yesterdayComplaintsTxt,
-          yesterdayCompletedBtn, yesterdayPendingBtn, yesterdayPendingTxt);
+      return new FragmentDashboardBinding((SwipeRefreshLayout) rootView, AllComplaintTxt,
+          AllComplaintTxt7, allComplaintsBtn, appCompatImageView, appCompatImageView12,
+          appCompatImageView2, appCompatTextView, appCompatTextView12, appCompatTextView2,
+          appCompatTextView3, appCompatTextView4, appCompatTextView6, appCompatTextView7,
+          appCompatTextView8, chartView, completedBtn, completedComplaintsTxt, guideline3, image3,
+          image4, pendingBtn, pendingComplaintsTxt, pieChart, returnComplaintTxt,
+          returnComplaintsBtn, submittedBtn, submittedComplaintTxt, swipeRefreshLayout,
+          yesterdayComplaintsBtn, yesterdayComplaintsTxt, yesterdayCompletedBtn,
+          yesterdayPendingBtn, yesterdayPendingTxt);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -12,13 +12,13 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/header"
             android:layout_width="match_parent"
-            android:gravity="center"
-            android:textSize="@dimen/_16sdp"
-            android:fontFamily="@font/poppins_semi_bold"
             android:layout_height="wrap_content"
-            android:padding="14dp"
             android:background="#5EFF9E80"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:gravity="center"
+            android:padding="14dp"
             android:text="@string/complaint_details"
+            android:textSize="@dimen/_16sdp"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.cardview.widget.CardView
@@ -65,8 +65,8 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_marginStart="8dp"
-                    android:src="@drawable/ic_account"
                     android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_account"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_id" />
 
@@ -101,9 +101,9 @@
                     android:id="@+id/iv_address"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/ic_baseline_local_library_24"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_baseline_local_library_24"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_complaint" />
 
@@ -125,8 +125,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
-                    android:visibility="invisible"
                     android:layout_marginBottom="16dp"
+                    android:visibility="invisible"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -140,7 +140,10 @@
                     android:background="@drawable/bg_layout"
                     android:textColor="@android:color/holo_green_light"
                     android:textSize="14sp"
-                    app:layout_constraintEnd_toEndOf="@+id/imageViewSelect"
+                    android:layout_marginBottom="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/imageViewSelect"
                     tools:text="Work Done" />
 
@@ -261,6 +264,24 @@
                 android:textStyle="normal" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/shareBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@drawable/bg_layout"
+            android:backgroundTint="@color/lightGreen"
+            android:drawableStart="@drawable/whatsapp_ic"
+            android:drawablePadding="@dimen/_10sdp"
+            android:gravity="center_vertical"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/share_on_whatsapp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/showBtnLayout" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

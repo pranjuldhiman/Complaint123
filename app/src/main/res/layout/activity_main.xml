@@ -11,6 +11,36 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <!--        <com.google.android.material.appbar.AppBarLayout-->
+        <!--            android:id="@+id/activity_main_appbarlayout"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">-->
+
+        <!--            <androidx.appcompat.widget.Toolbar-->
+        <!--                android:id="@+id/activity_main_toolbar"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="?attr/actionBarSize"-->
+        <!--                android:background="@color/white"-->
+        <!--                android:weightSum="1"-->
+        <!--                app:contentInsetStart="0dp"-->
+        <!--                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">-->
+
+        <!--                <androidx.appcompat.widget.AppCompatTextView-->
+        <!--                    android:id="@+id/titleTxt"-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:layout_centerInParent="true"-->
+        <!--                    android:layout_gravity="center_horizontal"-->
+        <!--                    android:fontFamily="@font/poppins_semi_bold"-->
+        <!--                    android:text="@string/dashboard"-->
+        <!--                    android:textColor="@color/black"-->
+        <!--                    android:textSize="@dimen/_16sdp" />-->
+
+        <!--            </androidx.appcompat.widget.Toolbar>-->
+
+        <!--        </com.google.android.material.appbar.AppBarLayout>-->
+
         <RelativeLayout
             android:id="@+id/rl"
             android:layout_width="match_parent"
@@ -53,7 +83,9 @@
     <!-- Container for contents of drawer - use NavigationView to make configuration easier -->
     <include
         android:id="@+id/navView"
-        layout="@layout/nav_drawer" />
+        layout="@layout/nav_drawer"
+        android:visibility="visible" />
+
 
 </androidx.drawerlayout.widget.DrawerLayout>
 

@@ -1,70 +1,70 @@
 [
     {
-        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_submitted.xml",
-        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\layout\\fragment_submitted.xml"
+        "merged": "/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_launcher.xml",
+        "source": "/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/res/layout/activity_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_complaints.xml",
-        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\layout\\fragment_complaints.xml"
+        "merged": "/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_return.xml",
+        "source": "/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/res/layout/fragment_return.xml"
     },
     {
-        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\loader_layout.xml",
-        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\layout\\loader_layout.xml"
+        "merged": "/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_pending.xml",
+        "source": "/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/res/layout/fragment_pending.xml"
     },
     {
-        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\show_return_dialog.xml",
-        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\layout\\show_return_dialog.xml"
+        "merged": "/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_layout.xml",
+        "source": "/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/res/layout/item_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_launcher.xml",
-        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\layout\\activity_launcher.xml"
+        "merged": "/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/login_fragment.xml",
+        "source": "/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/res/layout/login_fragment.xml"
     },
     {
-        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_dashboard.xml",
-        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\layout\\fragment_dashboard.xml"
+        "merged": "/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_resolved.xml",
+        "source": "/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/res/layout/fragment_resolved.xml"
     },
     {
-        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_layout.xml",
-        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\layout\\item_layout.xml"
+        "merged": "/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_completed.xml",
+        "source": "/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/res/layout/fragment_completed.xml"
     },
     {
-        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_pending.xml",
-        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\layout\\fragment_pending.xml"
+        "merged": "/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/nav_drawer.xml",
+        "source": "/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/res/layout/nav_drawer.xml"
     },
     {
-        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\show_done_dialog.xml",
-        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\layout\\show_done_dialog.xml"
+        "merged": "/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_submitted.xml",
+        "source": "/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/res/layout/fragment_submitted.xml"
     },
     {
-        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
-        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
+        "source": "/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/res/layout/activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\nav_drawer.xml",
-        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\layout\\nav_drawer.xml"
+        "merged": "/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/show_done_dialog.xml",
+        "source": "/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/res/layout/show_done_dialog.xml"
     },
     {
-        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\login_fragment.xml",
-        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\layout\\login_fragment.xml"
+        "merged": "/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/loader_layout.xml",
+        "source": "/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/res/layout/loader_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_completed.xml",
-        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\layout\\fragment_completed.xml"
+        "merged": "/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/show_return_dialog.xml",
+        "source": "/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/res/layout/show_return_dialog.xml"
     },
     {
-        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_item.xml",
-        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\layout\\layout_item.xml"
+        "merged": "/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_dashboard.xml",
+        "source": "/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/res/layout/fragment_dashboard.xml"
     },
     {
-        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_pending.xml",
-        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\layout\\activity_pending.xml"
+        "merged": "/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_item.xml",
+        "source": "/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/res/layout/layout_item.xml"
     },
     {
-        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_return.xml",
-        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\layout\\fragment_return.xml"
+        "merged": "/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_pending.xml",
+        "source": "/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/res/layout/activity_pending.xml"
     },
     {
-        "merged": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_resolved.xml",
-        "source": "C:\\Users\\Pranjul\\Downloads\\Complaint-main\\app\\src\\main\\res\\layout\\fragment_resolved.xml"
+        "merged": "/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_complaints.xml",
+        "source": "/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/res/layout/fragment_complaints.xml"
     }
 ]

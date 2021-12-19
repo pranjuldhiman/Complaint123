@@ -28,6 +28,11 @@ interface ApiService {
         @Part image: MultipartBody.Part
     ): Response<ResponseBody>
 
+    @PUT
+    suspend fun workDoneProcessWithoutFile(
+        @Url url: String
+    ): Response<ResponseBody>
+
     @FormUrlEncoded
     @PUT
     suspend fun actionReturnBack(

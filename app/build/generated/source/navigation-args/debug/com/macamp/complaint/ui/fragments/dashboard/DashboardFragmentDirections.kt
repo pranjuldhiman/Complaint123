@@ -19,6 +19,9 @@ public class DashboardFragmentDirections private constructor() {
     public fun actionDashboardFragmentToSubmittedFragment(): NavDirections =
         ActionOnlyNavDirections(R.id.action_dashboardFragment_to_submittedFragment)
 
+    public fun actionDashboardFragmentToReturnFragment(): NavDirections =
+        ActionOnlyNavDirections(R.id.action_dashboardFragment_to_returnFragment)
+
     public fun actionDashboardFragment(): NavDirections =
         NavGraphDirections.actionDashboardFragment()
 

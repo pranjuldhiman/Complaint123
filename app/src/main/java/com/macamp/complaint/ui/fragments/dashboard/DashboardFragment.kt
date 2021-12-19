@@ -33,6 +33,10 @@ class DashboardFragment : BaseFragment() {
     ): View {
         binding = FragmentDashboardBinding.inflate(layoutInflater, container, false)
 
+        binding.swipeRefreshLayout.setOnRefreshListener {
+            getDashboardData()
+            binding.swipeRefreshLayout.isRefreshing = false
+        }
         return binding.root
     }
 
@@ -66,6 +70,7 @@ class DashboardFragment : BaseFragment() {
         binding.AllComplaintTxt.text = data?.all.toString()
         binding.completedComplaintsTxt.text = data?.done.toString()
         binding.pendingComplaintsTxt.text = data?.inProcess.toString()
+        binding.returnComplaintTxt.text = data?.returnX.toString()
 
         binding.yesterdayComplaintsTxt.text = data?.yesterdayAll.toString()
         binding.yesterdayPendingTxt.text = data?.yesterdayInProcess.toString()
@@ -82,14 +87,14 @@ class DashboardFragment : BaseFragment() {
         chart.description.isEnabled = false
         val entries = ArrayList<PieEntry>()
         entries.add(PieEntry(data?.inProcess?.toFloat() ?: 0F, "In Process"))
-        entries.add(PieEntry(data?.done?.toFloat() ?: 0F, "Completed"))
+        entries.add(PieEntry(data?.done?.toFloat() ?: 0F, "Resolved"))
         entries.add(PieEntry(data?.returnX?.toFloat() ?: 0F, "Return"))
         entries.add(PieEntry(data?.submitted?.toFloat() ?: 0F, "Submitted"))
         val colors: ArrayList<Int> = ArrayList()
-        colors.add(0xFFDF4759.toInt())
-        colors.add(0xFF42BA96.toInt())
+        colors.add(0xFFDA4C4C.toInt())
+        colors.add(0xFF4CAF50.toInt())
         colors.add(0xFF167BFF.toInt())
-        colors.add(0xFF9C8245.toInt())
+        colors.add(0xFFF3BD37.toInt())
         val pieDataSet = PieDataSet(entries, ".")
         pieDataSet.colors = colors
 
@@ -121,6 +126,10 @@ class DashboardFragment : BaseFragment() {
         }
         binding.submittedBtn.setOnClickListener {
             val action = DashboardFragmentDirections.actionDashboardFragmentToSubmittedFragment()
+            findNavController().navigate(action)
+        }
+        binding.returnComplaintsBtn.setOnClickListener {
+            val action = DashboardFragmentDirections.actionDashboardFragmentToReturnFragment()
             findNavController().navigate(action)
         }
         binding.pendingBtn.setOnClickListener {
