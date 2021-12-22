@@ -35,6 +35,7 @@ class ComplaintsAdapter(
                 tvName.text = "From - ${complaints.name}"
                 tvComplaint.text = complaints.complaint
                 tvStatus.text = complaints.status
+                tvWardId.text = "Ward No:- ${complaints.wardNo}"
             }
             binding.root.setOnClickListener {
                 context.startActivity<PendingActivity> {

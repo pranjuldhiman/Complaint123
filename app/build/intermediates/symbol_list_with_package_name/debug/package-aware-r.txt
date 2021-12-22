@@ -3284,7 +3284,9 @@ id tv_address
 id tv_complaint
 id tv_id
 id tv_name
+id tv_reason
 id tv_status
+id tv_wardId
 id ucrop
 id ucrop_frame
 id ucrop_photobox
@@ -3602,6 +3604,7 @@ string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string id
+string image_optional
 string image_picker_provider_authority_suffix
 string is_p_r
 string item_view_role_description

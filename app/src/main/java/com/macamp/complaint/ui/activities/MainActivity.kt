@@ -1,5 +1,6 @@
 package com.macamp.complaint.ui.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
@@ -23,6 +24,7 @@ import timber.log.Timber.DebugTree
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+    private lateinit var navController: NavController
     private fun getDeviceToken() {
         FirebaseMessaging.getInstance().token.addOnCompleteListener(OnCompleteListener { task ->
             if (!task.isSuccessful) {
@@ -36,6 +38,12 @@ class MainActivity : AppCompatActivity() {
 
         })
     }
+
+    override fun onNewIntent(intent: Intent?) {
+        super.onNewIntent(intent)
+        navController.navigate(R.id.action_pendingFragment)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
@@ -47,12 +55,15 @@ class MainActivity : AppCompatActivity() {
         }
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment
-        val navController = navHostFragment.navController
+        navController = navHostFragment.navController
 
         val navGraph = navController.navInflater.inflate(R.navigation.nav_graph)
+
         navGraph.startDestination = R.id.dashboardFragment
         navController.graph = navGraph
         navigationMenu(navController)
+        if (intent.hasExtra("showPending")) navController.navigate(R.id.action_pendingFragment)
+
 
         getDeviceToken()
 

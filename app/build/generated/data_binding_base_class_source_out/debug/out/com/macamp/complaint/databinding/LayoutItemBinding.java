@@ -35,15 +35,20 @@ public final class LayoutItemBinding implements ViewBinding {
   @NonNull
   public final AppCompatTextView tvStatus;
 
+  @NonNull
+  public final AppCompatTextView tvWardId;
+
   private LayoutItemBinding(@NonNull CardView rootView, @NonNull CheckBox checkBox,
       @NonNull AppCompatTextView tvComplaint, @NonNull AppCompatTextView tvId,
-      @NonNull AppCompatTextView tvName, @NonNull AppCompatTextView tvStatus) {
+      @NonNull AppCompatTextView tvName, @NonNull AppCompatTextView tvStatus,
+      @NonNull AppCompatTextView tvWardId) {
     this.rootView = rootView;
     this.checkBox = checkBox;
     this.tvComplaint = tvComplaint;
     this.tvId = tvId;
     this.tvName = tvName;
     this.tvStatus = tvStatus;
+    this.tvWardId = tvWardId;
   }
 
   @Override
@@ -103,8 +108,14 @@ public final class LayoutItemBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tv_wardId;
+      AppCompatTextView tvWardId = ViewBindings.findChildViewById(rootView, id);
+      if (tvWardId == null) {
+        break missingId;
+      }
+
       return new LayoutItemBinding((CardView) rootView, checkBox, tvComplaint, tvId, tvName,
-          tvStatus);
+          tvStatus, tvWardId);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

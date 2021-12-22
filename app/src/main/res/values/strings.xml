@@ -62,4 +62,5 @@
     <string name="completed_complaints">Completed Complaints</string>
     <string name="resolved_complaints">Resolved Complaints</string>
     <string name="all_return_complaints">All Return Complaints</string>
+    <string name="image_optional">Image (optional)</string>
 </resources>

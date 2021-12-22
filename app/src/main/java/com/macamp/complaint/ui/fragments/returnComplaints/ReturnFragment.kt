@@ -15,6 +15,7 @@ import com.macamp.complaint.ui.fragments.viewModel.ComplaintsViewModel
 import com.macamp.complaint.utils.GetComplaintsListener
 import com.macamp.complaint.utils.getUserInfo
 import com.macamp.complaint.utils.sendMessage
+import com.macamp.complaint.utils.toast
 
 class ReturnFragment : BaseFragment() {
 
@@ -38,6 +39,7 @@ class ReturnFragment : BaseFragment() {
         complaintsAdapter =
             ComplaintsAdapter(list, isPending = false, context = requireActivity()){ list ->
                 Log.e("TAG", "onSelectedItems: ${list.size}")
+                selectedList = list
             }
         binding.recyclerView.apply {
             adapter = complaintsAdapter
@@ -58,7 +60,11 @@ class ReturnFragment : BaseFragment() {
                             "Ward No : ${complaints.wardNo}\n" +
                             "-----------------------------\n"
             }
-            requireActivity().sendMessage(shareMessageOnWhatsApp)
+            if (selectedList.size > 0) {
+                requireActivity().sendMessage(shareMessageOnWhatsApp)
+            } else {
+                toast("Please select at least 1 complaint")
+            }
         }
 
         // Refresh function for the layout

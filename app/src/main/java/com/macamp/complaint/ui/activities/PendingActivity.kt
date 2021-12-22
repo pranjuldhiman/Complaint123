@@ -24,10 +24,10 @@ import com.macamp.complaint.data.api.Status
 import com.macamp.complaint.data.model.Complaints
 import com.macamp.complaint.databinding.ActivityPendingBinding
 import com.macamp.complaint.utils.*
-import java.util.*
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
+import java.util.*
 
 
 @SuppressLint("SetTextI18n")
@@ -65,6 +65,7 @@ class PendingActivity : AppCompatActivity() {
                 "Address\t : ${complaints?.address}\n" +
                 "Parshad\t : ${complaints?.parshad}\n" +
                 "Department\t: ${complaints?.department}\n" +
+                "Reason\t: ${complaints?.resean}\n" +
                 "Ward No : ${complaints?.wardNo}\n"
         binding.shareBtn.setOnClickListener {
             sendMessage(shareMessageOnWhatsApp)
@@ -90,8 +91,9 @@ class PendingActivity : AppCompatActivity() {
         binding.statusTxt.text = " Status: ${data?.status}"
         binding.ivRatingBar.text = "Mobile: ${data?.mobile}"
         binding.ivStar.text = "Parshad: ${data?.parshad}"
-        binding.ivLike.text = "is PR: ${data?.isPr}"
+        binding.ivLike.text = "Is PR: ${data?.isPr}"
         binding.ivBookmark.text = "Ward No: ${data?.wardNo}"
+        binding.tvReason.text = "Reason: ${data?.resean ?: "Not Found!"}"
 
     }
 
@@ -132,19 +134,25 @@ class PendingActivity : AppCompatActivity() {
 
         closeBtn.setOnClickListener { dialog.dismiss() }
         submitBtn.setOnClickListener {
-            returnBackApiCall(returnTxt.text.toString(), complaints?.id.toString(), dialog)
+            if (returnTxt.text.toString() == "") {
+                toast("Please enter reason to return!")
+            } else
+                returnBackApiCall(returnTxt.text.toString(), complaints?.id.toString(), dialog)
         }
 
 
     }
+
     override fun onStop() {
         super.onStop()
         EventBus.getDefault().unregister(this)
     }
-    @Subscribe(threadMode = ThreadMode.MAIN,sticky = true)
+
+    @Subscribe(threadMode = ThreadMode.MAIN, sticky = true)
     fun onMessageEvent(isRefreshing: String?) {
 //        if (isRefreshing == "true")
     }
+
     private fun returnBackApiCall(reason: String, id: String, dialog: Dialog) {
         viewModel.actionComplaints(id, reason).observe(this) {
             when (it.status) {
@@ -215,6 +223,7 @@ class PendingActivity : AppCompatActivity() {
             }
         }
     }
+
     // Send an Intent with an action named "custom-event-name". The Intent sent should
     // be received by the ReceiverActivity.
     private fun sendMessage() {
@@ -224,6 +233,7 @@ class PendingActivity : AppCompatActivity() {
         intent.putExtra("message", "This is my message!")
         LocalBroadcastManager.getInstance(this).sendBroadcast(intent)
     }
+
     fun showProgress() {
 
         if (mProgressDialog == null) {

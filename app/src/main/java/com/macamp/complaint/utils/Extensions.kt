@@ -9,7 +9,6 @@ import android.util.Patterns
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
@@ -19,6 +18,7 @@ import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
+import com.google.android.material.snackbar.Snackbar
 import com.google.gson.Gson
 import com.macamp.complaint.data.model.User
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
@@ -44,7 +44,7 @@ fun Activity.toast(msg: String) {
 }
 
 fun Fragment.toast(msg: String) {
-    Toast.makeText(requireActivity(), msg, Toast.LENGTH_SHORT).show()
+    view?.let { Snackbar.make(it, msg, Snackbar.LENGTH_SHORT).show() }
 }
 
 fun <T : RecyclerView.ViewHolder> T.listen(event: (position: Int, type: Int) -> Unit): T {
@@ -54,7 +54,7 @@ fun <T : RecyclerView.ViewHolder> T.listen(event: (position: Int, type: Int) -> 
     return this
 }
 
- fun Activity.sendMessage(message: String) {
+fun Activity.sendMessage(message: String) {
 
     // Creating new intent
     val intent = Intent(Intent.ACTION_SEND)
@@ -73,7 +73,8 @@ fun <T : RecyclerView.ViewHolder> T.listen(event: (position: Int, type: Int) -> 
     // Starting Whatsapp
     startActivity(intent)
 }
- fun FragmentActivity.sendMessage(message: String) {
+
+fun FragmentActivity.sendMessage(message: String) {
 
     // Creating new intent
     val intent = Intent(Intent.ACTION_SEND)

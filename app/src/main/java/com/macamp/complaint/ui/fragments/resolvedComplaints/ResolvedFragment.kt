@@ -12,10 +12,10 @@ import com.macamp.complaint.data.model.Complaints
 import com.macamp.complaint.databinding.FragmentPendingBinding
 import com.macamp.complaint.ui.fragments.BaseFragment
 import com.macamp.complaint.ui.fragments.viewModel.ComplaintsViewModel
-import com.macamp.complaint.utils.GetComplaintsListener
 import com.macamp.complaint.utils.getUserInfo
 
 class ResolvedFragment : BaseFragment() {
+    private var selectedList = ArrayList<Complaints>()
     private val viewModel by viewModels<ComplaintsViewModel>()
     private val list = ArrayList<Complaints>()
     private var complaintsAdapter: ComplaintsAdapter? = null
@@ -31,9 +31,11 @@ class ResolvedFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        complaintsAdapter = ComplaintsAdapter(list,isPending = false,context =  requireActivity()){ list ->
-            Log.e("TAG", "onSelectedItems: ${list.size}")
-        }
+        complaintsAdapter =
+            ComplaintsAdapter(list, isPending = false, context = requireActivity()) { list ->
+                Log.e("TAG", "onSelectedItems: ${list.size}")
+                selectedList = list
+            }
         binding.recyclerView.apply {
             adapter = complaintsAdapter
         }

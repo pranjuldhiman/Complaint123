@@ -14,6 +14,7 @@ import com.macamp.complaint.ui.fragments.BaseFragment
 import com.macamp.complaint.ui.fragments.viewModel.ComplaintsViewModel
 import com.macamp.complaint.utils.getUserInfo
 import com.macamp.complaint.utils.sendMessage
+import com.macamp.complaint.utils.toast
 
 class AllComplaintsFragment : BaseFragment() {
     lateinit var binding: FragmentComplaintsBinding
@@ -40,6 +41,7 @@ class AllComplaintsFragment : BaseFragment() {
         complaintsAdapter =
             ComplaintsAdapter(list, context = requireActivity(), isPending = false) { list ->
                 Log.e("TAG", "onSelectedItems: ${list.size}")
+                selectedList = list
             }
 
         binding.recyclerView.apply { adapter = complaintsAdapter }
@@ -56,17 +58,22 @@ class AllComplaintsFragment : BaseFragment() {
                             "Address\t : ${complaints.address}\n" +
                             "Parshad\t : ${complaints.parshad}\n" +
                             "Department\t: ${complaints.department}\n" +
+                            "Reason\t: ${complaints.resean}\n" +
                             "Ward No : ${complaints.wardNo}\n" +
                             "-----------------------------\n"
             }
-            requireActivity().sendMessage(shareMessageOnWhatsApp)
+            if (selectedList.size > 0) {
+                requireActivity().sendMessage(shareMessageOnWhatsApp)
+
+            } else {
+                toast("Please select at least 1 complaint")
+            }
         }
 
         // Refresh function for the layout
-        binding.swipeRefreshLayout.setOnRefreshListener{
+        binding.swipeRefreshLayout.setOnRefreshListener {
 
             getAllComplaintsData()
-
             // This line is important as it explicitly refreshes only once
             // If "true" it implicitly refreshes forever
             binding.swipeRefreshLayout.isRefreshing = false

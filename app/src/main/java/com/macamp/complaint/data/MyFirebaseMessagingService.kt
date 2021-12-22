@@ -14,6 +14,7 @@ import androidx.core.app.NotificationCompat
 import androidx.core.content.res.ResourcesCompat
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
+import com.google.gson.Gson
 import com.macamp.complaint.R
 import com.macamp.complaint.ui.activities.MainActivity
 
@@ -26,9 +27,12 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
 //        EventBus.getDefault().postSticky(Constants.NOTIFICATION_DATA)
         if (remoteMessage.notification != null) {
-            Log.e("TAG", "onMessageReceived: ${remoteMessage.notification!!.title} " +
-                    "${remoteMessage.notification!!.body}" )
-            showNotification(remoteMessage.notification?.title, remoteMessage.notification?.body)
+
+            val title = remoteMessage.notification?.title?.replace("[\"", "")?.replace("\"]", "")
+            val body = remoteMessage.notification?.body?.replace("[\"", "")?.replace("\"]", "")
+
+            Log.e("TAG", "onMessageReceived: ${Gson().toJson(remoteMessage.data)}")
+            showNotification(title, body)
         } else {
 //            showNotification(remoteMessage.data["title"], remoteMessage.data["body"])
         }
@@ -39,9 +43,9 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         val mChannelId = getString(R.string.default_notification_channel_id)
         val mImportance = NotificationManager.IMPORTANCE_HIGH
         val mChannelName = getString(R.string.app_name)
-        val mIntent = Intent(this, MainActivity::class.java)
+        val mIntent = Intent(applicationContext, MainActivity::class.java)
         mIntent.flags = Intent.FLAG_ACTIVITY_SINGLE_TOP
-//        mIntent.putExtra(Constants.NOTIFICATION_DATA, "1")
+        mIntent.putExtra("showPending", "1")
 
         val NOTIID = System.currentTimeMillis().toInt()
         mIntent.action = Intent.ACTION_MAIN
@@ -60,11 +64,10 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
                 .setSound(defaultSoundUri)
                 .setContentIntent(pendingIntent)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-//            notificationBuilder.setSmallIcon(R.drawable.ic_notification_icon)
-            notificationBuilder.color =
-                ResourcesCompat.getColor(resources, R.color.white, null)
+            notificationBuilder.setSmallIcon(R.drawable.ic_launcher_foreground)
+            notificationBuilder.color = ResourcesCompat.getColor(resources, R.color.white, null)
         } else {
-//            notificationBuilder.setSmallIcon(R.drawable.ic_notification_icon)
+            notificationBuilder.setSmallIcon(R.drawable.ic_launcher_foreground)
         }
         val notificationManager =
             getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager

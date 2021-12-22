@@ -87,6 +87,9 @@ public final class ActivityPendingBinding implements ViewBinding {
   @NonNull
   public final AppCompatTextView tvName;
 
+  @NonNull
+  public final AppCompatTextView tvReason;
+
   private ActivityPendingBinding(@NonNull ScrollView rootView, @NonNull CardView bottomCardView,
       @NonNull CardView cardView, @NonNull AppCompatButton doneBtn, @NonNull Guideline guideline2,
       @NonNull AppCompatTextView header, @NonNull AppCompatImageView imageViewSelect,
@@ -97,7 +100,7 @@ public final class ActivityPendingBinding implements ViewBinding {
       @NonNull LinearLayoutCompat showBtnLayout, @NonNull AppCompatTextView statusTxt,
       @NonNull AppCompatTextView timeDateTxt, @NonNull AppCompatTextView tvAddress,
       @NonNull AppCompatTextView tvComplaint, @NonNull AppCompatTextView tvId,
-      @NonNull AppCompatTextView tvName) {
+      @NonNull AppCompatTextView tvName, @NonNull AppCompatTextView tvReason) {
     this.rootView = rootView;
     this.bottomCardView = bottomCardView;
     this.cardView = cardView;
@@ -120,6 +123,7 @@ public final class ActivityPendingBinding implements ViewBinding {
     this.tvComplaint = tvComplaint;
     this.tvId = tvId;
     this.tvName = tvName;
+    this.tvReason = tvReason;
   }
 
   @Override
@@ -275,10 +279,16 @@ public final class ActivityPendingBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tv_reason;
+      AppCompatTextView tvReason = ViewBindings.findChildViewById(rootView, id);
+      if (tvReason == null) {
+        break missingId;
+      }
+
       return new ActivityPendingBinding((ScrollView) rootView, bottomCardView, cardView, doneBtn,
           guideline2, header, imageViewSelect, ivAddress, ivBookmark, ivLike, ivRatingBar, ivStar,
           ivUser, returnBtn, shareBtn, showBtnLayout, statusTxt, timeDateTxt, tvAddress,
-          tvComplaint, tvId, tvName);
+          tvComplaint, tvId, tvName, tvReason);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

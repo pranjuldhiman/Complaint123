@@ -20,15 +20,14 @@ interface ApiService {
         @Field("password") password: String
     ): Response<UserData>
 
-
     @Multipart
-    @PUT
+    @POST
     suspend fun workDoneProcess(
         @Url url: String,
         @Part image: MultipartBody.Part
     ): Response<ResponseBody>
 
-    @PUT
+    @POST
     suspend fun workDoneProcessWithoutFile(
         @Url url: String
     ): Response<ResponseBody>

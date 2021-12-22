@@ -19,6 +19,7 @@ import com.macamp.complaint.ui.fragments.BaseFragment
 import com.macamp.complaint.ui.fragments.viewModel.ComplaintsViewModel
 import com.macamp.complaint.utils.getUserInfo
 import com.macamp.complaint.utils.sendMessage
+import com.macamp.complaint.utils.toast
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
@@ -76,7 +77,12 @@ class PendingFragment : BaseFragment() {
                             "Ward No : ${complaints.wardNo}\n" +
                             "-----------------------------\n"
             }
-            requireActivity().sendMessage(shareMessageOnWhatsApp)
+            if (selectedList.size > 0) {
+                requireActivity().sendMessage(shareMessageOnWhatsApp)
+
+            } else {
+                toast("Please select at least 1 complaint")
+            }
         }
         binding.noDataImage.setOnClickListener {
             EventBus.getDefault().postSticky("true")
