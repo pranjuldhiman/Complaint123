@@ -12,9 +12,7 @@ import com.macamp.complaint.data.model.Complaints
 import com.macamp.complaint.databinding.FragmentComplaintsBinding
 import com.macamp.complaint.ui.fragments.BaseFragment
 import com.macamp.complaint.ui.fragments.viewModel.ComplaintsViewModel
-import com.macamp.complaint.utils.getUserInfo
-import com.macamp.complaint.utils.sendMessage
-import com.macamp.complaint.utils.toast
+import com.macamp.complaint.utils.*
 
 class AllComplaintsFragment : BaseFragment() {
     lateinit var binding: FragmentComplaintsBinding
@@ -49,19 +47,19 @@ class AllComplaintsFragment : BaseFragment() {
             var shareMessageOnWhatsApp = ""
             selectedList.forEach { complaints ->
 
-                shareMessageOnWhatsApp =
-                    shareMessageOnWhatsApp + "Complaint : ${complaints.complaint}\n" +
-                            "Complaint ID\t: ${complaints.id}\n" +
-                            "Name\t: ${complaints.name}\n" +
-                            "Mobile : ${complaints.mobile}\n" +
-                            "Status\t: ${complaints.status}\n" +
-                            "Address\t : ${complaints.address}\n" +
-                            "Parshad\t : ${complaints.parshad}\n" +
-                            "Department\t: ${complaints.department}\n" +
-                            "Reason\t: ${complaints.resean}\n" +
-                            "Ward No : ${complaints.wardNo}\n" +
-                            "-----------------------------\n"
+                shareMessageOnWhatsApp += dataToSingleString(complaints = complaints, resources)
+//                    shareMessageOnWhatsApp + "${resources.getString(R.string.complaint, complaints.complaint)}\n" +
+//                            "${resources.getString(R.string.complaint_id, complaints.id.toString())}\n"+
+//                            "${resources.getString(R.string.name, complaints.name)}\n"+
+//                            "${resources.getString(R.string.mobile, complaints.mobile)}\n"+
+//                            "${resources.getString(R.string.status, complaints.status)}\n"+
+//                            "${resources.getString(R.string.address, complaints.address)}\n"+
+//                            "${resources.getString(R.string.parshad, complaints.parshad)}\n"+
+//                            "${resources.getString(R.string.department, complaints.department)}\n"+
+//                            "${resources.getString(R.string.ward_no, complaints.wardNo)}\n"+
+//                            "-----------------------------\n"
             }
+
             if (selectedList.size > 0) {
                 requireActivity().sendMessage(shareMessageOnWhatsApp)
 

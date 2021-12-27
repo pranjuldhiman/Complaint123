@@ -24,6 +24,9 @@ public final class NavDrawerBinding implements ViewBinding {
   public final AppCompatTextView allComplaintsBtn;
 
   @NonNull
+  public final AppCompatTextView changeLanguageTxt;
+
+  @NonNull
   public final AppCompatTextView dashboardBtn;
 
   @NonNull
@@ -54,14 +57,15 @@ public final class NavDrawerBinding implements ViewBinding {
   public final AppCompatTextView usernameTxt;
 
   private NavDrawerBinding(@NonNull NavigationView rootView,
-      @NonNull AppCompatTextView allComplaintsBtn, @NonNull AppCompatTextView dashboardBtn,
-      @NonNull AppCompatTextView logoutBtn, @NonNull NavigationView navView,
-      @NonNull AppCompatTextView numberTxt, @NonNull AppCompatTextView pendingBtn,
-      @NonNull AppCompatTextView resolvedComplaintsBtn, @NonNull AppCompatTextView returnBtn,
-      @NonNull AppCompatTextView submittedBtn, @NonNull CircleImageView userImage,
-      @NonNull AppCompatTextView usernameTxt) {
+      @NonNull AppCompatTextView allComplaintsBtn, @NonNull AppCompatTextView changeLanguageTxt,
+      @NonNull AppCompatTextView dashboardBtn, @NonNull AppCompatTextView logoutBtn,
+      @NonNull NavigationView navView, @NonNull AppCompatTextView numberTxt,
+      @NonNull AppCompatTextView pendingBtn, @NonNull AppCompatTextView resolvedComplaintsBtn,
+      @NonNull AppCompatTextView returnBtn, @NonNull AppCompatTextView submittedBtn,
+      @NonNull CircleImageView userImage, @NonNull AppCompatTextView usernameTxt) {
     this.rootView = rootView;
     this.allComplaintsBtn = allComplaintsBtn;
+    this.changeLanguageTxt = changeLanguageTxt;
     this.dashboardBtn = dashboardBtn;
     this.logoutBtn = logoutBtn;
     this.navView = navView;
@@ -104,6 +108,12 @@ public final class NavDrawerBinding implements ViewBinding {
       id = R.id.allComplaintsBtn;
       AppCompatTextView allComplaintsBtn = ViewBindings.findChildViewById(rootView, id);
       if (allComplaintsBtn == null) {
+        break missingId;
+      }
+
+      id = R.id.change_languageTxt;
+      AppCompatTextView changeLanguageTxt = ViewBindings.findChildViewById(rootView, id);
+      if (changeLanguageTxt == null) {
         break missingId;
       }
 
@@ -163,9 +173,9 @@ public final class NavDrawerBinding implements ViewBinding {
         break missingId;
       }
 
-      return new NavDrawerBinding((NavigationView) rootView, allComplaintsBtn, dashboardBtn,
-          logoutBtn, navView, numberTxt, pendingBtn, resolvedComplaintsBtn, returnBtn, submittedBtn,
-          userImage, usernameTxt);
+      return new NavDrawerBinding((NavigationView) rootView, allComplaintsBtn, changeLanguageTxt,
+          dashboardBtn, logoutBtn, navView, numberTxt, pendingBtn, resolvedComplaintsBtn, returnBtn,
+          submittedBtn, userImage, usernameTxt);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

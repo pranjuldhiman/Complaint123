@@ -1,20 +1,20 @@
 -- Merging decision tree log ---
 provider#androidx.core.content.FileProvider
-INJECTED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:51:9-59:20
+INJECTED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:53:9-61:20
 	android:grantUriPermissions
-		ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:55:13-47
+		ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:57:13-47
 	android:authorities
 		INJECTED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml
-		ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:53:13-60
+		ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:55:13-60
 	android:exported
-		ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:54:13-37
+		ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:56:13-37
 	android:name
-		ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:52:13-62
+		ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:54:13-62
 manifest
-ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:2:1-62:12
-INJECTED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:2:1-62:12
-INJECTED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:2:1-62:12
-INJECTED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:2:1-62:12
+ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:2:1-64:12
+INJECTED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:2:1-64:12
+INJECTED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:2:1-64:12
+INJECTED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:2:1-64:12
 MERGED from [androidx.databinding:viewbinding:7.0.3] /Users/pranjuldhiman/.gradle/caches/transforms-3/6965e940d7feb408d75b11a3dee288ee/transformed/jetified-viewbinding-7.0.3/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-fragment-ktx:2.3.5] /Users/pranjuldhiman/.gradle/caches/transforms-3/c92e3edd951a9a33a7b973209045eb5b/transformed/navigation-fragment-ktx-2.3.5/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-ui-ktx:2.3.5] /Users/pranjuldhiman/.gradle/caches/transforms-3/56113413f4c20a55eb32c6ab3d092c55/transformed/navigation-ui-ktx-2.3.5/AndroidManifest.xml:17:1-24:12
@@ -107,22 +107,22 @@ MERGED from [androidx.print:print:1.0.0] /Users/pranjuldhiman/.gradle/caches/tra
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/pranjuldhiman/.gradle/caches/transforms-3/219b1f335b8c07b73fe6157496fe66ab/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] /Users/pranjuldhiman/.gradle/caches/transforms-3/d3ea66c379342f6ee7e41fdc72402f0b/transformed/jetified-firebase-encoders-json-18.0.0/AndroidManifest.xml:15:1-23:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/pranjuldhiman/.gradle/caches/transforms-3/919eab043ec722901ca836acd167aab5/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
-INJECTED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:2:1-62:12
-INJECTED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:2:1-62:12
-INJECTED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:2:1-62:12
+INJECTED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:2:1-64:12
+INJECTED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:2:1-64:12
+INJECTED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:2:1-64:12
 	package
 		ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:4:5-35
 		INJECTED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml
-		ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:2:1-62:12
+		ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:2:1-64:12
 		INJECTED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml
 	xmlns:tools
 		ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml
-		ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:2:1-62:12
+		ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:2:1-64:12
 		INJECTED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:2:11-69
@@ -143,7 +143,7 @@ ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/
 	android:name
 		ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:7:22-74
 application
-ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:8:5-60:19
+ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:8:5-62:19
 MERGED from [com.github.dhaval2404:imagepicker:2.1] /Users/pranjuldhiman/.gradle/caches/transforms-3/b703afaf77f8e16946546e3c55dde161/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:21:5-40:19
 MERGED from [com.github.dhaval2404:imagepicker:2.1] /Users/pranjuldhiman/.gradle/caches/transforms-3/b703afaf77f8e16946546e3c55dde161/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:21:5-40:19
 MERGED from [com.jakewharton.timber:timber:4.7.1] /Users/pranjuldhiman/.gradle/caches/transforms-3/2422d69ead536013ae51a6f65f0e2d6e/transformed/jetified-timber-4.7.1/AndroidManifest.xml:7:5-20
@@ -229,9 +229,9 @@ ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/
 	android:name
 		ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:23:25-75
 meta-data#com.google.firebase.messaging.default_notification_icon
-ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:27:9-29:67
+ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:27:9-29:49
 	android:resource
-		ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:29:13-64
+		ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:29:13-46
 	android:name
 		ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:28:13-83
 meta-data#com.google.firebase.messaging.default_notification_color
@@ -247,31 +247,35 @@ ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/
 	android:name
 		ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:35:13-58
 activity#com.macamp.complaint.ui.activities.MainActivity
-ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:37:9-40:66
+ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:37:9-42:66
+	android:launchMode
+		ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:40:13-43
 	android:exported
 		ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:39:13-36
+	android:configChanges
+		ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:41:13-55
 	android:theme
-		ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:40:13-63
+		ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:42:13-63
 	android:name
 		ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:38:13-55
 activity#com.macamp.complaint.ui.activities.LauncherActivity
-ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:41:9-50:20
+ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:43:9-52:20
 	android:exported
-		ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:43:13-36
+		ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:45:13-36
 	android:theme
-		ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:44:13-63
+		ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:46:13-63
 	android:name
-		ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:42:13-59
+		ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:44:13-59
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:45:13-49:29
+ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:47:13-51:29
 action#android.intent.action.MAIN
-ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:46:17-69
+ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:48:17-69
 	android:name
-		ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:46:25-66
+		ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:48:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:48:17-77
+ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:50:17-77
 	android:name
-		ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:48:27-74
+		ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:50:27-74
 uses-sdk
 INJECTED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml
@@ -471,11 +475,11 @@ INJECTED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/ma
 		ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:56:13-58:58
+ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:58:13-60:58
 	android:resource
-		ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:58:17-55
+		ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:60:17-55
 	android:name
-		ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:57:17-67
+		ADDED from /Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:59:17-67
 queries
 ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/pranjuldhiman/.gradle/caches/transforms-3/b703afaf77f8e16946546e3c55dde161/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:9:5-19:15
 intent#action:name:android.media.action.IMAGE_CAPTURE

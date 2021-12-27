@@ -12,10 +12,7 @@ import com.macamp.complaint.data.model.Complaints
 import com.macamp.complaint.databinding.FragmentPendingBinding
 import com.macamp.complaint.ui.fragments.BaseFragment
 import com.macamp.complaint.ui.fragments.viewModel.ComplaintsViewModel
-import com.macamp.complaint.utils.GetComplaintsListener
-import com.macamp.complaint.utils.getUserInfo
-import com.macamp.complaint.utils.sendMessage
-import com.macamp.complaint.utils.toast
+import com.macamp.complaint.utils.*
 
 class ReturnFragment : BaseFragment() {
 
@@ -47,18 +44,7 @@ class ReturnFragment : BaseFragment() {
         binding.shareBtn.setOnClickListener {
             var shareMessageOnWhatsApp = ""
             selectedList.forEach { complaints ->
-
-                shareMessageOnWhatsApp =
-                    shareMessageOnWhatsApp + "Complaint : ${complaints.complaint}\n" +
-                            "Complaint ID\t: ${complaints.id}\n" +
-                            "Name\t: ${complaints.name}\n" +
-                            "Mobile : ${complaints.mobile}\n" +
-                            "Status\t: ${complaints.status}\n" +
-                            "Address\t : ${complaints.address}\n" +
-                            "Parshad\t : ${complaints.parshad}\n" +
-                            "Department\t: ${complaints.department}\n" +
-                            "Ward No : ${complaints.wardNo}\n" +
-                            "-----------------------------\n"
+                shareMessageOnWhatsApp += dataToSingleString(complaints = complaints, resources)
             }
             if (selectedList.size > 0) {
                 requireActivity().sendMessage(shareMessageOnWhatsApp)

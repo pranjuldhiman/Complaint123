@@ -37,7 +37,6 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/Theme.Complaint"
         android:usesCleartextTraffic="true" >
         <service
@@ -51,7 +50,7 @@
 
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
-            android:resource="@drawable/ic_launcher_foreground" />
+            android:resource="@drawable/logo" />
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/lightGreen" />
@@ -61,6 +60,7 @@
             android:exported="false" />
         <activity
             android:name="com.macamp.complaint.ui.activities.MainActivity"
+            android:configChanges="locale|orientation"
             android:exported="true"
             android:launchMode="singleTop"
             android:theme="@style/Theme.Complaint.NoActionBar" />

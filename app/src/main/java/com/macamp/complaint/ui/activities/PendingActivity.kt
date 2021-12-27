@@ -57,16 +57,7 @@ class PendingActivity : AppCompatActivity() {
     private fun onClickEvents() {
         binding.doneBtn.setOnClickListener { showDialog() }
         binding.returnBtn.setOnClickListener { showReturnDialog() }
-        val shareMessageOnWhatsApp = "Complaint : ${complaints?.complaint}\n" +
-                "Complaint ID\t: ${complaints?.id}\n" +
-                "Name\t: ${complaints?.name}\n" +
-                "Mobile : ${complaints?.mobile}\n" +
-                "Status\t: ${complaints?.status}\n" +
-                "Address\t : ${complaints?.address}\n" +
-                "Parshad\t : ${complaints?.parshad}\n" +
-                "Department\t: ${complaints?.department}\n" +
-                "Reason\t: ${complaints?.resean}\n" +
-                "Ward No : ${complaints?.wardNo}\n"
+        val shareMessageOnWhatsApp = dataToSingleString(complaints!!, resources)
         binding.shareBtn.setOnClickListener {
             sendMessage(shareMessageOnWhatsApp)
         }
@@ -83,17 +74,32 @@ class PendingActivity : AppCompatActivity() {
         )
         binding.imageViewSelect.visibility =
             if (data?.workDoneImg == null) View.GONE else View.VISIBLE
-        binding.tvId.text = "Complaint ID: ${data?.id}"
+        binding.tvId.text = getString(R.string.complaint_id, data?.id.toString())
         binding.timeDateTxt.text = convertedDate
-        binding.tvComplaint.text = "Complaint: ${data?.complaint}"
+        binding.tvComplaint.text = getString(R.string.complaint, data?.complaint.toString())
         binding.tvAddress.text = data?.address
         binding.tvName.text = data?.name
-        binding.statusTxt.text = " Status: ${data?.status}"
-        binding.ivRatingBar.text = "Mobile: ${data?.mobile}"
-        binding.ivStar.text = "Parshad: ${data?.parshad}"
-        binding.ivLike.text = "Is PR: ${data?.isPr}"
-        binding.ivBookmark.text = "Ward No: ${data?.wardNo}"
-        binding.tvReason.text = "Reason: ${data?.resean ?: "Not Found!"}"
+        when (complaints?.status) {
+            Constants.WORK_DONE -> {
+                binding.statusTxt.text = getString(R.string.resolved)
+            }
+            Constants.SUBMITTED -> {
+                binding.statusTxt.text = getString(R.string.submitted)
+            }
+            Constants.PENDING -> {
+                binding.statusTxt.text = getString(R.string.in_process)
+
+            }
+            Constants.RETURN -> {
+                binding.statusTxt.text = getString(R.string.returnTxt)
+            }
+            else -> binding.statusTxt.text = getString(R.string.status, complaints?.complaint)
+        }
+        binding.ivRatingBar.text = getString(R.string.mobile, data?.mobile.toString())
+        binding.ivStar.text = getString(R.string.parshad, data?.parshad.toString())
+        binding.ivLike.text = getString(R.string.is_p_r, data?.isPr.toString())
+        binding.ivBookmark.text = getString(R.string.ward_no, data?.wardNo.toString())
+        binding.tvReason.text = getString(R.string.reason, data?.resean ?: "Not Found!")
 
     }
 

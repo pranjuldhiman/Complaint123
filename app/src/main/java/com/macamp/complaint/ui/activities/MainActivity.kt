@@ -21,6 +21,8 @@ import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
 import timber.log.Timber
 import timber.log.Timber.DebugTree
+import java.util.*
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -45,10 +47,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        val local = getCurrentLocalisation()
+
+        if (local != "") {
+            setLocale(local!!)
+        }
+
         super.onCreate(savedInstanceState)
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
         binding.drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
         if (BuildConfig.DEBUG) {
             Timber.plant(DebugTree())
@@ -104,7 +114,7 @@ class MainActivity : AppCompatActivity() {
 //            }
 //        }
 //        binding.drawerLayout.addDrawerListener(toggle)
-//
+
 //        toggle.syncState()
 
         binding.drawerLayout.setOnTouchListener(object : OnSwipeTouchListener(this@MainActivity) {
@@ -117,32 +127,32 @@ class MainActivity : AppCompatActivity() {
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
                 R.id.dashboardFragment -> {
-                    binding.titleTxt.text = Constants.DASHBOARD
+                    binding.titleTxt.text = getString(R.string.dashboard)
                     setUi(binding.navView.dashboardBtn)
                 }
                 R.id.complaintsFragment -> {
-                    binding.titleTxt.text = Constants.COMPLAINTS
+                    binding.titleTxt.text = getString(R.string.all_complaints)
                     setUi(binding.navView.allComplaintsBtn)
 
                 }
                 R.id.completedFragment -> {
-                    binding.titleTxt.text = Constants.RESOLVED
+                    binding.titleTxt.text = getString(R.string.resolved_complaints)
                     setUi(binding.navView.resolvedComplaintsBtn)
                 }
                 R.id.resolvedFragment -> {
-                    binding.titleTxt.text = Constants.RESOLVED
+                    binding.titleTxt.text = getString(R.string.resolved_complaints)
                     setUi(binding.navView.resolvedComplaintsBtn)
                 }
                 R.id.submittedFragment -> {
-                    binding.titleTxt.text = Constants.SUBMITTED
+                    binding.titleTxt.text = getString(R.string.submitted_complaints)
                     setUi(binding.navView.submittedBtn)
                 }
                 R.id.returnFragment -> {
-                    binding.titleTxt.text = Constants.RETURN
+                    binding.titleTxt.text = getString(R.string.return_complaints)
                     setUi(binding.navView.returnBtn)
                 }
                 R.id.pendingFragment -> {
-                    binding.titleTxt.text = Constants.PENDING
+                    binding.titleTxt.text = getString(R.string.pending_complaints)
                     setUi(binding.navView.pendingBtn)
                 }
             }
@@ -185,6 +195,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+
     private fun navigationMenu(navController: NavController) {
         binding.ivMenu.setOnClickListener {
             binding.drawerLayout.openDrawer(GravityCompat.START)
@@ -199,6 +210,22 @@ class MainActivity : AppCompatActivity() {
         binding.navView.allComplaintsBtn.setOnClickListener {
             binding.drawerLayout.closeDrawer(GravityCompat.START)
             navController.navigate(R.id.action_complaintsFragment)
+        }
+        binding.navView.changeLanguageTxt.setOnClickListener {
+            binding.drawerLayout.closeDrawer(GravityCompat.START)
+            when {
+                getCurrentLocalisation() == "" || getCurrentLocalisation() == null -> {
+                    setLocale("hi")
+                }
+                getCurrentLocalisation() == "en" -> {
+                    setLocale("hi")
+                }
+                else -> {
+                    setLocale("en")
+                }
+            }
+            finishAffinity()
+            startActivity(Intent(this, MainActivity::class.java))
         }
         binding.navView.returnBtn.setOnClickListener {
             binding.drawerLayout.closeDrawer(GravityCompat.START)

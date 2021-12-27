@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="remember_me">Remember me</string>
+    <string name="login">Login</string>
+    <string name="watchlist">Watchlist</string>
+    <string name="trades">Trades</string>
+    <string name="submitted">प्रस्तुत</string>
+    <string name="change_lang">भाषा बदले</string>
+    <string name="account">Account</string>
+    <string name="nothing_here">Nothing here</string>
+    <string name="user123">user123</string>
+    <string name="userabc">userAbc</string>
+    <string name="zero">0</string>
+    <string name="all_complaints">सभी शिकायतें</string>
+    <string name="all_submitted_complaints">सभी प्रस्तुत शिकायतें</string>
+    <string name="more_info">More Info</string>
+    <string name="all_completed_complaints">सभी निस्तारित शिकायतें</string>
+    <string name="all_pending_complaints">सभी लंबित शिकायतें</string>
+    <string name="all_yesterday_complaints">कल की सभी शिकायतें</string>
+    <string name="yesterday_s_pending_complaints">कल की लंबित शिकायतें</string>
+    <string name="yesterday_completed_complaints">कल की निस्तारित शिकायतें</string>
+    <string name="all_complaint_chart">चार्ट</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="id">Id</string>
+    <string name="name">शिकायतकर्ता का नाम : %s</string>
+    <string name="mobile">मोबाइल : %s</string>
+    <string name="complaints">शिकायतें</string>
+    <string name="complaint">शिकायत : %s</string>
+    <string name="complaint_id">शिकायत आईडी : %s</string>
+    <string name="status">स्थिति : %s</string>
+    <string name="date">दिनांक %s</string>
+    <string name="address">पता : %s</string>
+    <string name="parshad">पार्सद : %s</string>
+    <string name="is_p_r">सार्वजनिक पश्चातापक है %s</string>
+    <string name="created_date_amp_time"><![CDATA[Created Date & Time]]></string>
+    <string name="updated_date_amp_time"><![CDATA[Updated Date & Time]]></string>
+    <string name="done">निस्तारित</string>
+    <string name="returnTxt">वापसी</string>
+    <string name="dashboard">डैशबोर्ड</string>
+    <string name="in_process">लंबित</string>
+    <string name="resolved">निस्तारित</string>
+    <string name="pending_complaints">लंबित शिकायतें</string>
+    <string name="return_complaints">वापसी शिकायतें</string>
+    <string name="submitted_complaints">प्रस्तुत शिकायतें</string>
+    <string name="profile">Profile</string>
+    <string name="logout">लॉग आउट</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="copyrights_are_reserved">Developed by ChalOnline</string>
+    <string name="ward_no">वार्ड नं : %s</string>
+    <string name="username_caps">USERNAME</string>
+    <string name="hello_again_n_welcome_back">Hello again,\n Welcome back.</string>
+    <string name="password_caps">PASSWORD</string>
+    <string name="department">विभाग : %s</string>
+    <string name="reason">कारण : %s</string>
+    <string name="complaint_completed">Complaint Completed</string>
+    <string name="submit">सबमिट</string>
+    <string name="return_complaint">वापसी शिकायतें</string>
+    <string name="please_enter_reason_for_the_return">कृपया वापसी का कारण दर्ज करें?</string>
+    <string name="write_your_reason">अपना कारण लिखें</string>
+    <string name="complaint_details">शिकायत विवरण</string>
+    <string name="share_on_whatsapp">व्हाट्सएप पर साझा करें</string>
+    <string name="share_selected_on_whatsapp">व्हाट्सएप पर चयनित साझा करें</string>
+    <string name="nothing_found_here">कोई रिकॉर्ड नहीं मिला!</string>
+    <string name="completed_complaints">Completed Complaints</string>
+    <string name="resolved_complaints">निस्तारित शिकायतें</string>
+    <string name="all_return_complaints">सभी वापसी शिकायतें</string>
+    <string name="image_optional">फोटो (वैकल्पिक)</string>
+
+</resources>

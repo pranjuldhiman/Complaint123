@@ -4,9 +4,11 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.macamp.complaint.R
 import com.macamp.complaint.data.model.Complaints
 import com.macamp.complaint.databinding.LayoutItemBinding
 import com.macamp.complaint.ui.activities.PendingActivity
+import com.macamp.complaint.utils.Constants
 import com.macamp.complaint.utils.startActivity
 
 class ComplaintsAdapter(
@@ -30,12 +32,27 @@ class ComplaintsAdapter(
             selectedList: ArrayList<Complaints>,
         ) {
             binding.apply {
-                val complaintNo = "Complaint Id:- ${complaints.id}"
+                val complaintNo = context.getString(R.string.complaint_id, complaints.id.toString())
                 tvId.text = complaintNo
                 tvName.text = "From - ${complaints.name}"
                 tvComplaint.text = complaints.complaint
-                tvStatus.text = complaints.status
-                tvWardId.text = "Ward No:- ${complaints.wardNo}"
+                when (complaints.status) {
+                    Constants.WORK_DONE -> {
+                        tvStatus.text = context.getString(R.string.resolved)
+                    }
+                    Constants.SUBMITTED -> {
+                        tvStatus.text = context.getString(R.string.submitted)
+                    }
+                    Constants.PENDING -> {
+                        tvStatus.text = context.getString(R.string.in_process)
+
+                    }
+                    Constants.RETURN -> {
+                        tvStatus.text = context.getString(R.string.returnTxt)
+                    }
+                    else -> tvStatus.text = context.getString(R.string.status, complaints.complaint)
+                }
+                tvWardId.text = context.getString(R.string.ward_no, complaints.wardNo)
             }
             binding.root.setOnClickListener {
                 context.startActivity<PendingActivity> {

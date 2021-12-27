@@ -168,6 +168,24 @@
                 android:layout_height="1dp"
                 android:background="#CFCECE"
                 android:visibility="visible" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/change_languageTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/lang_ic"
+                android:drawablePadding="10dp"
+                android:paddingHorizontal="@dimen/_25sdp"
+                android:paddingVertical="@dimen/_15sdp"
+                android:text="@string/change_lang"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="visible" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#CFCECE"
+                android:visibility="visible" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/logoutBtn"

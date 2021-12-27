@@ -1223,6 +1223,7 @@ color foreground_material_light
 color green
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color ic_launcher_background
 color lightBlueTxt
 color lightGreen
 color lightRed
@@ -2591,6 +2592,7 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable dialog_button_blue
 drawable gredient
+drawable hindi_lng_ic
 drawable ic_account
 drawable ic_arrow_right_black
 drawable ic_arrow_right_white
@@ -2606,7 +2608,6 @@ drawable ic_event_busy
 drawable ic_event_note
 drawable ic_exit_to_app
 drawable ic_keyboard_black_24dp
-drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_menu
 drawable ic_mtrl_checked_circle
@@ -2616,6 +2617,9 @@ drawable ic_mtrl_chip_close_circle
 drawable ic_photo_black_48dp
 drawable ic_photo_camera_black_48dp
 drawable ic_whatsapp_share_button
+drawable lang_ic
+drawable lang_icon
+drawable logo
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -2838,6 +2842,7 @@ id center_horizontal
 id center_vertical
 id chain
 id chains
+id change_languageTxt
 id chart_view
 id checkBox
 id checkbox
@@ -3521,6 +3526,7 @@ menu example_menu
 menu example_menu2
 menu ucrop_menu_activity
 mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 navigation nav_graph
 plurals mtrl_badge_content_description
@@ -3566,12 +3572,14 @@ string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
 string bottomsheet_action_expand_halfway
+string change_lang
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
 string chip_text
 string clear_text_end_icon_content_description
 string common_google_play_services_unknown_issue
+string complaint
 string complaint_completed
 string complaint_details
 string complaint_id
@@ -3580,8 +3588,10 @@ string completed_complaints
 string copyrights_are_reserved
 string created_date_amp_time
 string dashboard
+string date
 string default_notification_channel_id
 string default_web_client_id
+string department
 string done
 string error_camera_app_not_found
 string error_failed_pick_gallery_image
@@ -3606,6 +3616,7 @@ string icon_content_description
 string id
 string image_optional
 string image_picker_provider_authority_suffix
+string in_process
 string is_p_r
 string item_view_role_description
 string login
@@ -3630,6 +3641,7 @@ string material_timepicker_minute
 string material_timepicker_pm
 string material_timepicker_select_time
 string material_timepicker_text_input_mode_description
+string mobile
 string more_info
 string mtrl_badge_numberless_content_description
 string mtrl_chip_close_icon_content_description
@@ -3684,10 +3696,11 @@ string path_password_strike_through
 string pending_complaints
 string permission_camera_denied
 string please_enter_reason_for_the_return
-string portfolio
 string profile
 string project_id
+string reason
 string remember_me
+string resolved
 string resolved_complaints
 string returnTxt
 string return_complaint
@@ -3698,6 +3711,7 @@ string share_selected_on_whatsapp
 string status
 string status_bar_notification_info_overflow
 string submit
+string submitted
 string submitted_complaints
 string title_camera
 string title_choose_image_provider

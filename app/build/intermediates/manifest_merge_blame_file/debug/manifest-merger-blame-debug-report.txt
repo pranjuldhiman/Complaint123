@@ -47,7 +47,7 @@
 28-->[com.google.firebase:firebase-messaging:23.0.0] /Users/pranjuldhiman/.gradle/caches/transforms-3/12b2d78202e6786c30eb1a2a14041bbc/transformed/jetified-firebase-messaging-23.0.0/AndroidManifest.xml:25:22-79
 29
 30    <application
-30-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:8:5-61:19
+30-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:8:5-62:19
 31        android:name="com.macamp.complaint.CSApp"
 31-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:9:9-30
 32        android:allowBackup="true"
@@ -64,92 +64,93 @@
 38-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:13:9-54
 39        android:supportsRtl="true"
 39-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:14:9-35
-40        android:testOnly="true"
-41        android:theme="@style/Theme.Complaint"
-41-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:15:9-47
-42        android:usesCleartextTraffic="true" >
-42-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:16:9-44
-43        <service
-43-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:18:9-25:19
-44            android:name="com.macamp.complaint.data.MyFirebaseMessagingService"
-44-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:19:13-60
-45            android:enabled="true"
-45-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:20:13-35
-46            android:exported="false" >
-46-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:21:13-37
-47            <intent-filter android:priority="1" >
-47-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:22:13-24:29
-47-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:22:28-48
-48                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-48-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:23:17-78
-48-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:23:25-75
-49            </intent-filter>
-50        </service>
-51
-52        <meta-data
-52-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:27:9-29:67
-53            android:name="com.google.firebase.messaging.default_notification_icon"
-53-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:28:13-83
-54            android:resource="@drawable/ic_launcher_foreground" />
-54-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:29:13-64
-55        <meta-data
-55-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:30:9-32:52
-56            android:name="com.google.firebase.messaging.default_notification_color"
-56-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:31:13-84
-57            android:resource="@color/lightGreen" />
-57-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:32:13-49
-58
-59        <activity
-59-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:34:9-36:40
-60            android:name="com.macamp.complaint.ui.activities.PendingActivity"
-60-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:35:13-58
-61            android:exported="false" />
-61-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:36:13-37
-62        <activity
-62-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:37:9-41:66
-63            android:name="com.macamp.complaint.ui.activities.MainActivity"
-63-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:38:13-55
+40        android:theme="@style/Theme.Complaint"
+40-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:15:9-47
+41        android:usesCleartextTraffic="true" >
+41-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:16:9-44
+42        <service
+42-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:18:9-25:19
+43            android:name="com.macamp.complaint.data.MyFirebaseMessagingService"
+43-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:19:13-60
+44            android:enabled="true"
+44-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:20:13-35
+45            android:exported="false" >
+45-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:21:13-37
+46            <intent-filter android:priority="1" >
+46-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:22:13-24:29
+46-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:22:28-48
+47                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+47-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:23:17-78
+47-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:23:25-75
+48            </intent-filter>
+49        </service>
+50
+51        <meta-data
+51-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:27:9-29:49
+52            android:name="com.google.firebase.messaging.default_notification_icon"
+52-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:28:13-83
+53            android:resource="@drawable/logo" />
+53-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:29:13-46
+54        <meta-data
+54-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:30:9-32:52
+55            android:name="com.google.firebase.messaging.default_notification_color"
+55-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:31:13-84
+56            android:resource="@color/lightGreen" />
+56-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:32:13-49
+57
+58        <activity
+58-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:34:9-36:40
+59            android:name="com.macamp.complaint.ui.activities.PendingActivity"
+59-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:35:13-58
+60            android:exported="false" />
+60-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:36:13-37
+61        <activity
+61-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:37:9-42:66
+62            android:name="com.macamp.complaint.ui.activities.MainActivity"
+62-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:38:13-55
+63            android:configChanges="locale|orientation"
+63-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:41:13-55
 64            android:exported="true"
 64-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:39:13-36
 65            android:launchMode="singleTop"
 65-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:40:13-43
 66            android:theme="@style/Theme.Complaint.NoActionBar" />
-66-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:41:13-63
+66-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:42:13-63
 67        <activity
-67-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:42:9-51:20
+67-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:43:9-52:20
 68            android:name="com.macamp.complaint.ui.activities.LauncherActivity"
-68-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:43:13-59
+68-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:44:13-59
 69            android:exported="true"
-69-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:44:13-36
+69-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:45:13-36
 70            android:theme="@style/Theme.Complaint.NoActionBar" >
-70-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:45:13-63
+70-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:46:13-63
 71            <intent-filter>
-71-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:46:13-50:29
+71-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:47:13-51:29
 72                <action android:name="android.intent.action.MAIN" />
-72-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:47:17-69
-72-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:47:25-66
+72-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:48:17-69
+72-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:48:25-66
 73
 74                <category android:name="android.intent.category.LAUNCHER" />
-74-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:49:17-77
-74-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:49:27-74
+74-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:50:17-77
+74-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:50:27-74
 75            </intent-filter>
 76        </activity>
 77
 78        <provider
 79            android:name="androidx.core.content.FileProvider"
-79-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:53:13-62
+79-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:54:13-62
 80            android:authorities="com.macamp.complaint.provider"
-80-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:54:13-60
+80-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:55:13-60
 81            android:exported="false"
-81-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:55:13-37
+81-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:56:13-37
 82            android:grantUriPermissions="true" >
-82-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:56:13-47
+82-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:57:13-47
 83            <meta-data
-83-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:57:13-59:58
+83-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:58:13-60:58
 84                android:name="android.support.FILE_PROVIDER_PATHS"
-84-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:58:17-67
+84-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:59:17-67
 85                android:resource="@xml/provider_paths" />
-85-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:59:17-55
+85-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:60:17-55
 86        </provider>
 87
 88        <activity
@@ -180,11 +181,11 @@
 101            android:grantUriPermissions="true" >
 101-->[com.github.dhaval2404:imagepicker:2.1] /Users/pranjuldhiman/.gradle/caches/transforms-3/b703afaf77f8e16946546e3c55dde161/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:35:13-47
 102            <meta-data
-102-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:57:13-59:58
+102-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:58:13-60:58
 103                android:name="android.support.FILE_PROVIDER_PATHS"
-103-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:58:17-67
+103-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:59:17-67
 104                android:resource="@xml/image_picker_provider_paths" />
-104-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:59:17-55
+104-->/Users/pranjuldhiman/AndroidStudioProjects/Complaint123/app/src/main/AndroidManifest.xml:60:17-55
 105        </provider>
 106
 107        <service

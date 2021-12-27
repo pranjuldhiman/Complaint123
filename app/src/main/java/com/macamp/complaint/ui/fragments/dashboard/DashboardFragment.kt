@@ -1,25 +1,24 @@
 package com.macamp.complaint.ui.fragments.dashboard
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import com.github.mikephil.charting.animation.Easing
 import com.github.mikephil.charting.charts.PieChart
+import com.github.mikephil.charting.data.PieData
+import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.data.PieEntry
+import com.github.mikephil.charting.formatter.PercentFormatter
+import com.macamp.complaint.R
 import com.macamp.complaint.data.api.Status
 import com.macamp.complaint.data.model.DashboardData
 import com.macamp.complaint.databinding.FragmentDashboardBinding
 import com.macamp.complaint.ui.fragments.BaseFragment
 import com.macamp.complaint.utils.getUserInfo
-import android.R.color
-import android.graphics.Color
-import com.github.mikephil.charting.animation.Easing
-import com.github.mikephil.charting.data.PieData
-import com.github.mikephil.charting.data.PieDataSet
-import com.github.mikephil.charting.formatter.PercentFormatter
-import com.github.mikephil.charting.utils.ColorTemplate
 
 
 class DashboardFragment : BaseFragment() {
@@ -86,10 +85,25 @@ class DashboardFragment : BaseFragment() {
         chart.animateY(1000, Easing.EaseInOutQuad);
         chart.description.isEnabled = false
         val entries = ArrayList<PieEntry>()
-        entries.add(PieEntry(data?.inProcess?.toFloat() ?: 0F, "In Process"))
-        entries.add(PieEntry(data?.done?.toFloat() ?: 0F, "Resolved"))
-        entries.add(PieEntry(data?.returnX?.toFloat() ?: 0F, "Return"))
-        entries.add(PieEntry(data?.submitted?.toFloat() ?: 0F, "Submitted"))
+        entries.add(
+            PieEntry(
+                data?.inProcess?.toFloat() ?: 0F,
+                resources.getString(R.string.in_process)
+            )
+        )
+        entries.add(PieEntry(data?.done?.toFloat() ?: 0F, resources.getString(R.string.resolved)))
+        entries.add(
+            PieEntry(
+                data?.returnX?.toFloat() ?: 0F,
+                resources.getString(R.string.returnTxt)
+            )
+        )
+        entries.add(
+            PieEntry(
+                data?.submitted?.toFloat() ?: 0F,
+                resources.getString(R.string.submitted)
+            )
+        )
         val colors: ArrayList<Int> = ArrayList()
         colors.add(0xFFDA4C4C.toInt())
         colors.add(0xFF4CAF50.toInt())

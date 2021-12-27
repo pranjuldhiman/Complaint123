@@ -32,7 +32,8 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
             val body = remoteMessage.notification?.body?.replace("[\"", "")?.replace("\"]", "")
 
             Log.e("TAG", "onMessageReceived: ${Gson().toJson(remoteMessage.data)}")
-            showNotification(title, body)
+            Log.e("TAG", "onMessageReceived: ${Gson().toJson(remoteMessage.notification)}")
+            showNotification(remoteMessage.data["title"], remoteMessage.data["body"])
         } else {
 //            showNotification(remoteMessage.data["title"], remoteMessage.data["body"])
         }

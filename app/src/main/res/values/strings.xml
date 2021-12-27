@@ -1,13 +1,14 @@
 <resources>
-    <string name="app_name">Complaint</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name" translatable="false">NNS 24</string>
     <string name="password">Password</string>
+    <string name="hello_blank_fragment" translatable="false">Password</string>
     <string name="username">Username</string>
     <string name="remember_me">Remember me</string>
     <string name="login">Login</string>
     <string name="watchlist">Watchlist</string>
     <string name="trades">Trades</string>
-    <string name="portfolio">Portfolio</string>
+    <string name="submitted">Submitted</string>
+    <string name="change_lang">Change Language</string>
     <string name="account">Account</string>
     <string name="nothing_here">Nothing here</string>
     <string name="user123">user123</string>
@@ -27,29 +28,36 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="id">Id</string>
-    <string name="name">Name</string>
+    <string name="name">Name : %s</string>
     <string name="complaints">Complaints</string>
-    <string name="status">Status</string>
-    <string name="address">Address</string>
-    <string name="parshad">Parshad</string>
-    <string name="is_p_r">is P.R</string>
+    <string name="mobile">Mobile : %s</string>
+    <string name="complaint_id">Complaint ID : %s</string>
+    <string name="complaint" >Complaint : %s </string>
+    <string name="status">Status : %s</string>
+    <string name="date">Date %s</string>
+    <string name="address">Address : %s</string>
+    <string name="parshad">Parshad : %s</string>
+    <string name="is_p_r">Is P.R %s</string>
     <string name="created_date_amp_time"><![CDATA[Created Date & Time]]></string>
     <string name="updated_date_amp_time"><![CDATA[Updated Date & Time]]></string>
     <string name="done">Done</string>
     <string name="returnTxt">Return</string>
     <string name="dashboard">Dashboard</string>
+    <string name="in_process">In Process</string>
+    <string name="resolved">Resolved</string>
     <string name="pending_complaints">Pending Complaints</string>
     <string name="return_complaints">Return Complaints</string>
     <string name="submitted_complaints">Submitted Complaints</string>
     <string name="profile">Profile</string>
     <string name="logout">Logout</string>
     <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
-    <string name="copyrights_are_reserved">Copyrights are Reserved</string>
-    <string name="ward_no">Ward No.</string>
+    <string name="copyrights_are_reserved">Developed by ChalOnline</string>
+    <string name="ward_no">Ward No. : %s</string>
     <string name="username_caps">USERNAME</string>
     <string name="hello_again_n_welcome_back">Hello again,\n Welcome back.</string>
     <string name="password_caps">PASSWORD</string>
-    <string name="complaint_id">Complaint Id:-</string>
+    <string name="department">Department : %s</string>
+    <string name="reason">Reason : %s</string>
     <string name="complaint_completed">Complaint Completed</string>
     <string name="submit">Submit</string>
     <string name="return_complaint">Return Complaint</string>

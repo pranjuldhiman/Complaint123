@@ -3,8 +3,11 @@ package com.macamp.complaint.utils
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.content.res.Configuration
+import android.content.res.Resources
 import android.graphics.Bitmap
 import android.graphics.drawable.Drawable
+import android.util.DisplayMetrics
 import android.util.Patterns
 import android.widget.EditText
 import android.widget.ImageView
@@ -20,6 +23,8 @@ import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
 import com.google.android.material.snackbar.Snackbar
 import com.google.gson.Gson
+import com.macamp.complaint.R
+import com.macamp.complaint.data.model.Complaints
 import com.macamp.complaint.data.model.User
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
@@ -52,6 +57,36 @@ fun <T : RecyclerView.ViewHolder> T.listen(event: (position: Int, type: Int) -> 
         event.invoke(adapterPosition, itemViewType)
     }
     return this
+}
+
+fun dataToSingleString(complaints: Complaints, resources: Resources): String {
+
+    return "${resources.getString(R.string.complaint, complaints.complaint)}\n" +
+            "${resources.getString(R.string.complaint_id, complaints.id.toString())}\n" +
+            "${resources.getString(R.string.name, complaints.name)}\n" +
+            "${resources.getString(R.string.mobile, complaints.mobile)}\n" +
+            "${resources.getString(R.string.status, complaints.status)}\n" +
+            "${resources.getString(R.string.address, complaints.address)}\n" +
+            "${resources.getString(R.string.parshad, complaints.parshad)}\n" +
+            "${resources.getString(R.string.department, complaints.department)}\n" +
+            "${resources.getString(R.string.ward_no, complaints.wardNo)}\n" +
+            "-----------------------------\n"
+}
+
+fun Activity.setLocale(lang: String?) {
+
+    Preferences.prefs?.saveValue(Constants.APP_LANG, lang)
+
+    val myLocale = Locale(lang)
+    val res: Resources = resources
+    val dm: DisplayMetrics = res.displayMetrics
+    val conf: Configuration = res.configuration
+    conf.locale = myLocale
+    res.updateConfiguration(conf, dm)
+//    val refresh = Intent(this, MainActivity::class.java)
+//    finishAffinity()
+//    startActivity(refresh)
+//    recreate()
 }
 
 fun Activity.sendMessage(message: String) {
@@ -101,13 +136,18 @@ fun getUserInfo(): User? {
     return gson.fromJson(data, User::class.java)
 }
 
+//get user object in local
+fun getCurrentLocalisation(): String? {
+    return Preferences.prefs?.getValue(Constants.APP_LANG, "")
+}
+
 fun EditText.isEmailValid(): Boolean {
     val emailToText: String = this.text.toString()
     return emailToText.isNotEmpty() && Patterns.EMAIL_ADDRESS.matcher(emailToText).matches()
 }
 
 
-fun getPathForCameraImage(context: Activity, bitmap: Bitmap): File? {
+fun getPathForCameraImage(context: Activity, bitmap: Bitmap): File {
     val destination = File(context.cacheDir, System.currentTimeMillis().toString() + ".png")
     val fo: FileOutputStream
     try {
