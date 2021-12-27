@@ -1,6 +1,8 @@
 package com.macamp.complaint.ui.fragments.dashboard
 
+import android.content.Intent
 import android.graphics.Color
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -35,6 +37,9 @@ class DashboardFragment : BaseFragment() {
         binding.swipeRefreshLayout.setOnRefreshListener {
             getDashboardData()
             binding.swipeRefreshLayout.isRefreshing = false
+        }
+        binding.clickAction.setOnClickListener {
+            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://chalonline.in")))
         }
         return binding.root
     }

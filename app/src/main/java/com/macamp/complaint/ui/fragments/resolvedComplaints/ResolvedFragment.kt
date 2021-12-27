@@ -12,7 +12,10 @@ import com.macamp.complaint.data.model.Complaints
 import com.macamp.complaint.databinding.FragmentPendingBinding
 import com.macamp.complaint.ui.fragments.BaseFragment
 import com.macamp.complaint.ui.fragments.viewModel.ComplaintsViewModel
+import com.macamp.complaint.utils.dataToSingleString
 import com.macamp.complaint.utils.getUserInfo
+import com.macamp.complaint.utils.sendMessage
+import com.macamp.complaint.utils.toast
 
 class ResolvedFragment : BaseFragment() {
     private var selectedList = ArrayList<Complaints>()
@@ -39,7 +42,28 @@ class ResolvedFragment : BaseFragment() {
         binding.recyclerView.apply {
             adapter = complaintsAdapter
         }
+        binding.shareBtn.setOnClickListener {
+            var shareMessageOnWhatsApp = ""
+            selectedList.forEach { complaints ->
+                shareMessageOnWhatsApp += dataToSingleString(complaints = complaints, resources)
+            }
 
+            if (selectedList.size > 0) {
+                requireActivity().sendMessage(shareMessageOnWhatsApp)
+
+            } else {
+                toast("Please select at least 1 complaint")
+            }
+        }
+
+        // Refresh function for the layout
+        binding.swipeRefreshLayout.setOnRefreshListener {
+
+            getResolvedComplaints()
+            // This line is important as it explicitly refreshes only once
+            // If "true" it implicitly refreshes forever
+            binding.swipeRefreshLayout.isRefreshing = false
+        }
         getResolvedComplaints()
     }
 
